@@ -3,21 +3,21 @@ import Link from 'next/link'
 import React, { createContext, useState } from 'react'
 import { BsChevronDoubleRight, BsChevronDoubleLeft, BsFillHouseFill, BsInfoCircle, BsCassette, BsEnvelope, BsPersonCircle } from "react-icons/bs";
 
-type ExpandedContextType = "expanded" | "contracted";
+type ExpandedContextType = boolean;
 
-const SidebarContext = createContext<ExpandedContextType>("expanded");
+const SidebarContext = createContext<ExpandedContextType>(false);
 
 const Navbar = () => {
-  const [expanded, setExpanded] = useState<ExpandedContextType>("expanded");
+  const [expanded, setExpanded] = useState<ExpandedContextType>(false);
   const [activeLink, setActiveLink] = useState(0);
   return (
     <header className="-ml-4 -mt-4 h-screen bg-gray-100 dark:bg-gray-800">
-      <SidebarContext.Provider value={{expanded}}> 
+      <SidebarContext.Provider value={expanded}> 
         <div className={`flex flex-col h-screen duration-300 ${expanded ? "w-40" : "w-16"}`}>
         
           <div className="flex justify-end">          
-            <button onClick={() => setExpanded(curr => !curr)} className="mb-8">               
-              {expanded ? <BsChevronDoubleLeft className="text-4xl p-2"/> : <BsChevronDoubleRight className="text-4xl p-2"/>}
+            <button onClick={() => setExpanded(curr => !curr)} className="text-lg mb-8 p-2 hover:text-gray-500/75 ">               
+              {expanded ? <BsChevronDoubleLeft /> : <BsChevronDoubleRight />}
             </button>
           </div>
                

@@ -71,12 +71,14 @@ const projectsPage = () => {
       <div className="flex flex-col items-center w-10/12">    
         <ul className="flex flex-wrap justify-center my-10 mx-80 sm:my-2 sm:mx-4">
           {projects.map((project) => (
-            <ProjectCard 
-              albumImg={project.albumImg} 
-              bandcampURL={project.bandcampURL} 
-              albumName={project.albumName} 
-              artistName={project.artistName} 
-            />
+            <div key={project.albumName}>
+              <ProjectCard 
+                albumImg={project.albumImg} 
+                bandcampURL={project.bandcampURL} 
+                albumName={project.albumName} 
+                artistName={project.artistName} 
+              />
+            </div>            
           ))}
         </ul>
       </div>  
