@@ -1,3 +1,36 @@
+## Portfolio React site bootstrapped with Next.js, using Typescript and Tailwind CSS.
+
+This site is intended to be a work in progress utilizing technologies of my current focus while displaying my professional abilities and artistic accomplishments.
+Sort of a living resume/portfolio.
+
+Stay tuned for more updates.
+
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
