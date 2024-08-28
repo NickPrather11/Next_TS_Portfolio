@@ -6,7 +6,7 @@ export const collections: { projects?: Collection } = {}
 export default async function connectToDB () {
     dotenv.config();
  
-    const client: MongoClient = new MongoClient(process.env.DB_CONN_STRING!);
+    const client: MongoClient = new MongoClient(process.env. NEXT_PUBLIC_DB_URI!);
             
     try {
         await client.connect();
