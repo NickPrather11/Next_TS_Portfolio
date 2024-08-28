@@ -30,9 +30,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      DB_CONN_STRING: ${{secrets.DB_CONN_STRING}}
-      DB_NAME_PROJECTS: ${{secrets.DB_NAME_PROJECTS}}
-      COLLECTION_NAME_MUSICPROJECTS: ${{secrets.COLLECTION_NAME_MUSICPROJECTS}}
+      NEXT_PUBLIC_DB_URI: ${{secrets.NEXT_PUBLIC_DB_URI}}
+      NEXT_PUBLIC_PROJECTS_DB: ${{secrets.NEXT_PUBLIC_PROJECTS_DB}}
+      NEXT_PUBLIC_MUSIC_COLLECTION: ${{secrets.NEXT_PUBLIC_MUSIC_COLLECTION}}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
