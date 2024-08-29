@@ -1,5 +1,7 @@
 ## Portfolio React site bootstrapped with Next.js, using Typescript and Tailwind CSS.
 
+Site deployed here: https://nickprather11.github.io/Next_TS_Portfolio/
+
 This site is intended to be a work in progress utilizing technologies of my current focus while displaying my professional abilities and artistic accomplishments.
 Sort of a living resume/portfolio.
 
