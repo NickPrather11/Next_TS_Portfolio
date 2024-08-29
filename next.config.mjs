@@ -2,7 +2,7 @@
 
 
 const nextConfig = {
-    basePath: "/Next_TS_Portfolio",
+    basePath: process.env.NEXT_PUBLIC_BASEPATH,
     output: "export"
 };
 
