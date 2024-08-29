@@ -12,7 +12,7 @@ const getProjectData = async (): Promise<Array<Project>> => {
       const client = await connectToDB();
       const db = client.db(process.env.NEXT_PUBLIC_PROJECTS_DB);
       let data: any = await db.collection(process.env.NEXT_PUBLIC_MUSIC_COLLECTION!).find({}).toArray();
-      console.log("data.length = " + data.length);
+      //console.log("data.length = " + data.length);
       return data;
 };
 
