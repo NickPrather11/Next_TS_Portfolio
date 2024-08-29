@@ -25,6 +25,11 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  NEXT_PUBLIC_DB_URI: ${{secrets.NEXT_PUBLIC_DB_URI}}
+  NEXT_PUBLIC_PROJECTS_DB: ${{secrets.NEXT_PUBLIC_PROJECTS_DB}}
+  NEXT_PUBLIC_MUSIC_COLLECTION: ${{secrets.NEXT_PUBLIC_MUSIC_COLLECTION}}
+
 jobs:
   # Build job
   build:
@@ -75,15 +80,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-     
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}     
       - name: Build with Next.js
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
-        env:
-          NEXT_PUBLIC_DB_URI: ${{secrets.NEXT_PUBLIC_DB_URI}}
-          NEXT_PUBLIC_PROJECTS_DB: ${{secrets.NEXT_PUBLIC_PROJECTS_DB}}
-          NEXT_PUBLIC_MUSIC_COLLECTION: ${{secrets.NEXT_PUBLIC_MUSIC_COLLECTION}}
-      
+        run: ${{ steps.detect-package-manager.outputs.runner }} next build      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
