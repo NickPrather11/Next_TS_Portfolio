@@ -60,8 +60,6 @@ jobs:
         with:
           node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      - name: Display secrets
-        run: env
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
