@@ -1,8 +1,15 @@
 /** @type {import('next').NextConfig} */
 
+const isGithubActions = process.env.GITHUB_ACTIONS || false
+
+let basePath = '/'
+
+if(isGithubActions) {
+    basePath = '/Next_TS_Portfolio/'
+}
 
 const nextConfig = {
-    basePath: process.env.NEXT_PUBLIC_BASEPATH,
+    basePath: basePath,
     output: "export"
 };
 
