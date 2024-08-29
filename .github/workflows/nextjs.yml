@@ -29,10 +29,6 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      NEXT_PUBLIC_DB_URI: ${{secrets.NEXT_PUBLIC_DB_URI}}
-      NEXT_PUBLIC_PROJECTS_DB: ${{secrets.NEXT_PUBLIC_PROJECTS_DB}}
-      NEXT_PUBLIC_MUSIC_COLLECTION: ${{secrets.NEXT_PUBLIC_MUSIC_COLLECTION}}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -81,6 +77,10 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env:
+          NEXT_PUBLIC_DB_URI: ${{secrets.NEXT_PUBLIC_DB_URI}}
+          NEXT_PUBLIC_PROJECTS_DB: ${{secrets.NEXT_PUBLIC_PROJECTS_DB}}
+          NEXT_PUBLIC_MUSIC_COLLECTION: ${{secrets.NEXT_PUBLIC_MUSIC_COLLECTION}}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
