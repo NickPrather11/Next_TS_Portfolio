@@ -47,7 +47,11 @@ jobs:
           generator_config_file: ./next.config.mjs
 
       - name: Build with Next.js
-        run: npx next build
+        run: |
+          npm ci
+          npm run build
+          npm run export
+          touch out/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
