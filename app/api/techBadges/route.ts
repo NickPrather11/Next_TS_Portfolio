@@ -1,22 +1,17 @@
 import dbConnect from '../../db/dbConnect'
-import Album from '../../models/album'
+import TechBadge from '../../models/techBadge'
 import { NextRequest, NextResponse } from 'next/server'
-import * as dotenv from "dotenv"
 
-dotenv.config();
-
-interface IAlbum {
-    albumName: string;
-    artistName: string;
-    albumImg: string;
-    bandcampURL: string;
+interface IBadge {
+    techImg: string
+    techName: string
 }
 
 export async function GET() {
     try {
         await dbConnect();
-        const albums = await Album.find();
-        return NextResponse.json({ albums });
+        const badges = await TechBadge.find();
+        return NextResponse.json({ badges });
     } catch (err) {
         console.log("GET error: " + err)
     }
@@ -24,10 +19,10 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
     try {
-        const newAlbumData: IAlbum = await request.json();
+        const newBadge: IBadge = await request.json();
         await dbConnect();
-        await Album.create(newAlbumData);
-        return NextResponse.json({ message: "Album Created" }, { status: 201 });
+        await TechBadge.create(newBadge);
+        return NextResponse.json({ message: "TechBadge Created" }, { status: 201 });
 
     } catch (err) {
         console.log("POST error: " + err)
@@ -38,8 +33,8 @@ export async function DELETE(request: NextRequest) {
     try {
         const id = request.nextUrl.searchParams.get("id");
         await dbConnect();
-        await Album.findByIdAndDelete(id);
-        return NextResponse.json({ message: "Album deleted" }, { status: 200 });
+        await TechBadge.findByIdAndDelete(id);
+        return NextResponse.json({ message: "TechBadge deleted" }, { status: 200 });
     } catch (err) {
         console.log("DELETE error: " + err)
     }  
