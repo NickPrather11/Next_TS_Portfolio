@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import TechCard from '../components/TechCard'
 
 const aboutPage = () => {
   return (
@@ -15,7 +16,9 @@ const aboutPage = () => {
             <Link href="https://next-ts-portfolio-seven.vercel.app/">https://next-ts-portfolio-seven.vercel.app/</Link>
           </div>
 
-          <div id="tech_display"></div>
+          <div id="tech_display">
+            {/* get tech images and names from db and display in a TechCard component here */}
+          </div>
 
         </div>        
     </main>    

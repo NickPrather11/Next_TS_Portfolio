@@ -1,6 +1,6 @@
 ## Portfolio React site bootstrapped with Next.js, using Typescript and Tailwind CSS.
 
-DEPLOYMENT IN PROGRESS
+Deployed here: https://next-ts-portfolio-seven.vercel.app/
 
 This site is intended to be a work in progress utilizing technologies of my current focus while displaying my professional abilities and artistic accomplishments.
 Sort of a living resume/portfolio.

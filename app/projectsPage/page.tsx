@@ -1,27 +1,34 @@
-import connectToDB from "../lib/dbConnect"
 import ProjectCard from '../components/ProjectCard'
 
-interface Project {
+interface IAlbum {
     albumName: string;
     albumImg: string;
     artistName: string;
     bandcampURL: string;
 }
 
-const getProjectData = async (): Promise<Array<Project>> => {
-      const client = await connectToDB();
-      const db = client.db(process.env.NEXT_PUBLIC_PROJECTS_DB);
-      let data: any = await db.collection(process.env.NEXT_PUBLIC_MUSIC_COLLECTION!).find({}).toArray();
-      //console.log("data.length = " + data.length);
-      return data;
-};
+interface AlbumArray {
+  albums: IAlbum[]
+}
+
+const getAlbums = async (): Promise<AlbumArray> => {
+    const res = await fetch(process.env.PATH_URI + "/api/albums", {
+      cache: "no-store",
+    });
+
+    if (!res.ok) {
+      console.log("Failed to fetch albums");
+    }
+
+    return res.json();
+}
 
 const projectsPage = async () => {
-  const res: Array<Project> = await getProjectData();
+  const { albums } = await getAlbums();
    return (
     <div className="flex flex-col items-center w-10/12">    
       <ul className="flex flex-wrap justify-center my-10 mx-80 sm:my-2 sm:mx-4">          
-        {res.map((project: Project) => (
+        {albums.map((project: IAlbum) => (
           <div key={project.albumName}>
             <ProjectCard 
               albumImg={project.albumImg} 
