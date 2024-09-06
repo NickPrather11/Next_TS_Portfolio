@@ -11,7 +11,7 @@ const Navbar = () => {
   const [expanded, setExpanded] = useState<ExpandedContextType>(false);
   const [activeLink, setActiveLink] = useState(0);
   return (
-    <header className="-ml-4 -mt-4 h-screen bg-gray-100 dark:bg-gray-800">
+    <header className="fixed -ml-4 -mt-4 h-screen bg-gray-100 dark:bg-gray-800">
       <SidebarContext.Provider value={expanded}> 
         <div className={`flex flex-col h-screen duration-300 ${expanded ? "w-40" : "w-16"}`}>
         

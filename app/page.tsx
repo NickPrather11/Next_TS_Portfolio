@@ -1,9 +1,13 @@
 export default function Home() {
   return (
-    <main className="flex p-4">
-      <div className="flex flex-col justify-center">
-        <b>Landing Page</b>
-      </div>            
+    <main className="flex flex-col justify-content-start h-screen p-2">      
+        <div className="grid place-items-center dark:text-gray-300">
+          
+          <div className="mb-12">
+            <b className="text-3xl dark:text-gray-100">LANDING PAGE</b>
+          </div>    
+
+        </div>      
     </main>
   );
 }

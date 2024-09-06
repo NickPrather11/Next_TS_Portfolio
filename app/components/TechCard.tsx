@@ -1,20 +1,17 @@
 import React from 'react'
 
 type TechProps = {
-    _id: number,
-    techName: string, 
-    techLogo: string
+    name: string, 
+    url: string,
+    imgFile: string
   }
 
-const TechCard = ({_id, techName, techLogo}: TechProps) => {
+const TechCard = ({name, url, imgFile}: TechProps) => {
   return (
-    <div key={_id} className="projCardParent flex hover:bg-gray-800 rounded-3xl">
-      <li className="flex flex-col px-9 py-7 items-center">
-        <img className="h-36 w-36 lg:h-40 lg:w-40 xl:h-44 xl:w-44 rounded-lg shadow-xl transition-all duration-300" 
-          src={techLogo} alt=""/>
-        <div className="m-3">
-          <p className="w-32 text-sm font-medium text-gray-200 text-center text-wrap">{techName}</p>
-        </div>
+    <div key={name} className="projCardParent flex rounded-lg bg-slate-200">
+      <li className="grid col-end-1">
+        <img className="w-32 h-auto p-4" 
+          src={imgFile} alt={url}/>
       </li>
     </div>
   )

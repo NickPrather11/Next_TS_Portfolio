@@ -2,8 +2,8 @@ import React from 'react'
 
 const loginPage = () => {
   return (
-    <main className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-lg">
+    <main className="flex flex-col justify-content-start h-screen p-2">
+        <div className="grid place-items-center dark:text-gray-300">
             <form action="#" className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8">
                 <p className="text-center text-lg font-medium">Sign in to your account</p>
 

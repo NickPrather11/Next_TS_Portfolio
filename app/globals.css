@@ -29,9 +29,9 @@ body {
 
 @layer components {
   .projCardParent:hover .albumCover {
-    @apply h-40 w-40 
-          lg:h-44 lg:w-44
-          xl:h-48 xl:w-48;
+    @apply h-auto w-40 
+          lg:h-auto lg:w-44
+          xl:h-auto xl:w-48;
     }
 }
 

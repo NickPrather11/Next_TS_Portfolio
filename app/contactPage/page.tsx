@@ -2,12 +2,18 @@ import React from 'react'
 
 const contactPage = () => {
   return (
-    <main className="flex-auto flex-col p-4">
-      <section>
+    <main className="flex flex-col justify-content-start h-screen p-2">
+      <div className="grid place-items-center dark:text-gray-300">
+
+        <div className="mb-12">
+          <b className="text-3xl dark:text-gray-100">CONTACT</b>
+        </div> 
+
+        <section>
           <div className="grid grid-cols-1 justify-items-center">
 
-            <div className="p-8 max-w-lg lg:pl-12 lg:pt-12">
-              <p className="text-center">
+            <div className="m-8">
+              <p>
                 what do you want
               </p>
             </div>            
@@ -68,7 +74,8 @@ const contactPage = () => {
               </form>
             </div>
           </div>
-      </section>
+        </section>
+      </div>
     </main>
     
   )
