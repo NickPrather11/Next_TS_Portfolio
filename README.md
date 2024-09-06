@@ -11,7 +11,7 @@ Added db seed files in case new db instances are needed for future deployments.
 
 Currently serving tech logo images from public folder, may move to storing images in db.
 
-Moved db connection to layout file, in order to connect to and update/populate db as early as possible. Because of this, I have commented out the db connection call in pages. Will eventually make this more stable (in case connection to db is lost between initial connection and loading pages that require db data).
+Moved db connection to layout file, in order to connect to and update/populate db as early as possible.
 
 -
 -
