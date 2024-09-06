@@ -12,7 +12,7 @@ interface IAlbum {
 
 export async function GET() {
     try {
-        // await dbConnect();
+        await dbConnect();
         const albums = await Album.find();
         return NextResponse.json({ albums });
     } catch (err) {
@@ -23,7 +23,7 @@ export async function GET() {
 export async function POST(request: NextRequest) {
     try {
         const newAlbumData: IAlbum = await request.json();
-        // await dbConnect();
+        await dbConnect();
         await Album.create(newAlbumData);
         return NextResponse.json({ message: "Album Created" }, { status: 201 });
 
@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
 export async function DELETE(request: NextRequest) {
     try {
         const id = request.nextUrl.searchParams.get("id");
-        // await dbConnect();
+        await dbConnect();
         await Album.findByIdAndDelete(id);
         return NextResponse.json({ message: "Album deleted" }, { status: 200 });
     } catch (err) {
