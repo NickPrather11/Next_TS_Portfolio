@@ -43,7 +43,7 @@ const aboutPage = () => {
               Having made the difficult decision to leave his career at Field2Base in March 2024 due to health reasons, Nick has spent his time since focusing on personal health and professional growth. This includes continuing to learn and apply new web development technologies (as exemplified by this website), working on art and music projects, and occasionally consulting for a few audio equipment manufacturing startups. 
               <br></br>
               <br></br>
-              For more information on Nick's career and projects, check out the links below.
+              For more information on Nick&apos;s career and projects, check out the links below.
             </p>
           </div>
 
