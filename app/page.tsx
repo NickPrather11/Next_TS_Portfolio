@@ -4,7 +4,7 @@ export default function Home() {
         <div className="grid place-items-center dark:text-gray-300">
           
           <div className="mb-12">
-            <b className="text-3xl dark:text-gray-100">LANDING PAGE</b>
+            <b className="text-3xl dark:text-gray-100">Hi, I'm Nick!</b>
           </div>    
 
         </div>      
