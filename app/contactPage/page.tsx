@@ -14,7 +14,7 @@ const contactPage = () => {
 
             <div className="m-8">
               <p>
-                what do you want
+                This part does not currently work. I will not see anything you type here.
               </p>
             </div>            
 
