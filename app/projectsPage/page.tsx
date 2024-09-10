@@ -1,8 +1,9 @@
-import { Suspense } from 'react'
-import AlbumsDiv from '../components/AlbumsDiv'
+import React, { Suspense } from 'react'
+import Loading from '../components/Loading'
 
-const projectsPage = async () => {
-  
+const AlbumsDiv = React.lazy(() => import('../components/AlbumsDiv'));
+
+const projectsPage = async () => {  
    return (
     <main className="flex flex-col justify-content-start h-screen p-2">
       <div className="grid place-items-center dark:text-gray-300">
@@ -15,12 +16,11 @@ const projectsPage = async () => {
           <div className="flex flex-col items-center gap-4">
             <b className="text-xl">Recordings</b>
             <p className="italic text-sm">I have recorded a lot of music in my life. Here is what is currently available.</p>
-          </div>   
-        
-          <Suspense fallback={<p>Loading...</p>} > 
+          </div>
+
+          <Suspense fallback={<Loading />}> 
             <AlbumsDiv />
-          </Suspense> 
-          
+          </Suspense>          
         </div>
 
       </div>
