@@ -1,9 +1,10 @@
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import Navbar from "./components/Navbar"
-import dbConnect from './db/dbConnect'
-import compareAndUpdateAlbums from '@/app/db/controllers/compareAndUpdateAlbums'
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import Footer from "./components/Footer";
+import dbConnect from "./db/dbConnect";
+import compareAndUpdateAlbums from "@/app/db/controllers/compareAndUpdateAlbums";
+import Navbar from "./components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
 const intializeDB = async () => {
   await dbConnect();
   compareAndUpdateAlbums();
-}
+};
 
 export default function RootLayout({
   children,
@@ -24,14 +25,11 @@ export default function RootLayout({
 }>) {
   intializeDB();
   return (
-    <html lang="en">
-      <body className="flex bg-white dark:bg-gray-900">
+    <html lang="en" className={inter.className}>
+      <body className="flex flex-col m-0 p-0 min-h-screen relative pb-40 bg-big_green_painting bg-cover bg-fixed">
         <Navbar />
-        <div className="w-full">
-          <div className={inter.className}>
-            {children}
-          </div>
-        </div>                
+        {children}
+        <Footer />
       </body>
     </html>
   );
