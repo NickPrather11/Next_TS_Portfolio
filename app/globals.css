@@ -37,15 +37,22 @@ body {
 
 @layer components {
   .projCardParent:hover .albumCover {
-    @apply h-auto w-40 
-          lg:h-auto lg:w-44
-          xl:h-auto xl:w-48;
+    @apply w-40;
   }
 
   .card {
-    @apply px-6 py-4 rounded-lg shadow-2xl
-          bg-opacity-90 dark:bg-opacity-80
-        bg-slate-200 dark:bg-slate-700;
+    @apply px-6 py-4 m-4 rounded-lg shadow-2xl
+          border-2 border-slate-800
+          bg-opacity-80 dark:bg-opacity-80
+        bg-slate-300 dark:bg-slate-700;
+  }
+
+  .hyperlink {
+    @apply underline text-blue-500 hover:text-blue-700 visited:text-purple-600;
+  }
+
+  .landingCard-row {
+    @apply flex flex-col justify-evenly lg:flex-row;
   }
 }
 

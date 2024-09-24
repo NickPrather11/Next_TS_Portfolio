@@ -24,14 +24,12 @@ const AlbumCard = ({
       key={albumName}
       href={bandcampURL}
       target="_blank"
-      className="card projCardParent flex justify-center h-80 w-64 mx-9 my-7 hover:bg-gray-800"
+      className="card projCardParent flex justify-center h-[19rem] w-64 hover:bg-gray-800"
     >
-      <Center className="albumCover absolute flex-col h-auto w-36 lg:h-auto lg:w-40 xl:h-auto xl:w-44 transition-all duration-300">
+      <Center className="albumCover absolute flex-col w-36 transition-all duration-300">
         <img className="albumCover rounded-lg" src={albumImg} alt="" />
         <Center className="flex-col">
-          <div className="pt-3 text-center text-sm font-medium text-wrap">
-            {albumName}
-          </div>
+          <div className="pt-3 text-center text-sm text-wrap">{albumName}</div>
           <div className="pt-1 text-center text-sm text-gray-400 text-wrap">
             by {artistName}
           </div>

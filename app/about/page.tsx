@@ -50,7 +50,7 @@ const aboutPage = () => {
               <p>Site Repo:</p>
               <Link
                 href="https://github.com/NickPrather11/Next_TS_Portfolio"
-                className="underline text-blue-500 hover:text-blue-700 visited:text-purple-600"
+                className="hyperlink w-full break-words"
                 target="_blank"
               >
                 https://github.com/NickPrather11/Next_TS_Portfolio
@@ -60,7 +60,7 @@ const aboutPage = () => {
               <p>Planned Updates:</p>
               <Link
                 href="https://github.com/users/NickPrather11/projects/1"
-                className="underline text-blue-500 hover:text-blue-700 visited:text-purple-600"
+                className="hyperlink w-full break-words"
                 target="_blank"
               >
                 https://github.com/users/NickPrather11/projects/1

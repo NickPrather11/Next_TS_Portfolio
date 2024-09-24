@@ -19,8 +19,8 @@ const LandingCard = ({
     <Link
       key={title}
       href={url}
-      target={`${external} ? _blank : _self`}
-      className="card flex flex-col justify-start w-40 lg:w-44 xl:w-48 hover:bg-gray-800"
+      target={external ? "_blank" : "_self"}
+      className="card flex flex-col w-3/4 hover:bg-gray-800 lg:w-1/2"
     >
       <b className="mb-4 text-center text-xl text-wrap">{title}</b>
       <p className="text-center text-sm text-wrap">{description}</p>

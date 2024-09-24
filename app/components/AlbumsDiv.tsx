@@ -1,48 +1,50 @@
-import React from 'react'
-import AlbumCard from './AlbumCard'
+import React from "react";
+import AlbumCard from "./AlbumCard";
 
 interface IAlbum {
-    albumName: string,
-    albumImg: string,
-    artistName: string,
-    bandcampURL: string,
-    releaseDate: Date
+  albumName: string;
+  albumImg: string;
+  artistName: string;
+  bandcampURL: string;
+  releaseDate: Date;
 }
 
 interface AlbumArray {
-  albums: IAlbum[]
+  albums: IAlbum[];
 }
 
 const getAlbums = async (): Promise<AlbumArray> => {
-    const res = await fetch(process.env.PATH_URI + "/api/albums", {
-      cache: "no-store",
-    });
+  const res = await fetch(process.env.PATH_URI + "/api/albums", {
+    cache: "no-store",
+  });
 
-    if (!res.ok) {
-      console.log("Failed to fetch albums");
-    }
+  if (!res.ok) {
+    console.log("Failed to fetch albums");
+  }
 
-    return res.json();
-}
+  return res.json();
+};
 
 const AlbumsDiv = async () => {
-    const { albums } = await getAlbums();
-    albums.sort((a,b) => (b.releaseDate > a.releaseDate) ? 1 : ((a.releaseDate > b.releaseDate) ? -1 : 0));
-    return (
-        <ul className="flex flex-wrap justify-center my-10 mx-80 sm:my-2 sm:mx-4">                   
-            {albums.map((album: IAlbum) => (
-              <li key={album.albumName}>
-                <AlbumCard 
-                  albumImg={album.albumImg} 
-                  bandcampURL={album.bandcampURL} 
-                  albumName={album.albumName} 
-                  artistName={album.artistName}
-                  releaseDate={album.releaseDate} 
-                />
-              </li>            
-            ))}             
-        </ul>
-    )
-}
+  const { albums } = await getAlbums();
+  albums.sort((a, b) =>
+    b.releaseDate > a.releaseDate ? 1 : a.releaseDate > b.releaseDate ? -1 : 0
+  );
+  return (
+    <ul className="flex flex-wrap justify-center">
+      {albums.map((album: IAlbum) => (
+        <li key={album.albumName}>
+          <AlbumCard
+            albumImg={album.albumImg}
+            bandcampURL={album.bandcampURL}
+            albumName={album.albumName}
+            artistName={album.artistName}
+            releaseDate={album.releaseDate}
+          />
+        </li>
+      ))}
+    </ul>
+  );
+};
 
-export default AlbumsDiv
+export default AlbumsDiv;

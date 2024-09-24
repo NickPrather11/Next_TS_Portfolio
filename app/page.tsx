@@ -5,8 +5,8 @@ import Page from "./components/Page";
 export default function Home() {
   return (
     <Page>
-      <Center className="card flex-col max-w-6xl gap-4">
-        <h1 className="m-2">Hi, I&apos;m Nick!</h1>
+      <Center className="card flex-col mx-8 gap-4 lg:max-w-6xl">
+        <h1>Hi, I&apos;m Nick!</h1>
 
         <img src="/AvatarNick.svg" alt="" className="h-80 rounded-xl" />
 
@@ -26,50 +26,47 @@ export default function Home() {
       </div>
       */}
 
-      <div id="all_landing_cards" className="flex flex-col w-full m-8 gap-8">
-        <div id="row_1" className="flex flex-row justify-evenly">
-          <Center>
-            <LandingCard
-              url="https://github.com/NickPrather11/Next_TS_Portfolio"
-              title="Site Repo"
-              description="See the code repository for this site"
-              external={true}
-            />
-          </Center>
-
-          <Center>
-            <LandingCard
-              url="https://github.com/users/NickPrather11/projects/1"
-              title="Planned Updates"
-              description="GitHub project for tracking updates, bug fixes, etc."
-              external={true}
-            />
-          </Center>
-        </div>
-
-        <div id="row_2" className="flex flex-row justify-evenly">
+      <Center id="all_landing_cards" className="flex flex-col w-full m-8">
+        <Center className="landingCard-row">
           <LandingCard
-            url="./projectsPage"
+            url="https://github.com/NickPrather11/Next_TS_Portfolio"
+            title="Site Repo"
+            description="See the code repository for this site"
+            external={true}
+          />
+
+          <LandingCard
+            url="https://github.com/users/NickPrather11/projects/1"
+            title="Planned Updates"
+            description="GitHub project for tracking updates, bug fixes, etc."
+            external={true}
+          />
+        </Center>
+
+        <Center className="landingCard-row">
+          <LandingCard
+            url="./projects"
             title="Projects"
             description="Check out my past development projects, audio recordings, and more..."
             external={false}
           />
-
           <LandingCard
-            url="./aboutPage"
+            url="./about"
             title="About"
             description="Learn more about this site and my work experience..."
             external={false}
           />
 
+          {/*
           <LandingCard
-            url="./contactPage"
+            url="./contact"
             title="Contact"
             description="Curious about my work? Interested in collaborating? Send me a message!"
             external={false}
           />
-        </div>
-      </div>
+          */}
+        </Center>
+      </Center>
     </Page>
   );
 }
