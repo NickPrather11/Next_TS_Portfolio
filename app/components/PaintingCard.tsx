@@ -2,27 +2,26 @@ import React from "react";
 import Center from "./Center";
 
 type PaintingProps = {
-  path: string;
-  title: string;
-  dimensions: string;
+  fileName: string;
 };
 
-const PaintingCard = ({ path, title, dimensions }: PaintingProps) => {
+const PaintingCard = ({ fileName }: PaintingProps) => {
+  const title: string = fileName
+    .substring(fileName.indexOf("_") + 1, fileName.length)
+    .replace(/\.[^/.]+$/, "")
+    .replaceAll("_", " ");
+  const dimensions: string = fileName.slice(0, fileName.indexOf("_"));
+  const path: string = "/paintings/" + fileName;
   return (
-    <div
-      key={path}
-      className="card flex justify-center h-80 w-64 mx-9 my-7 hover:bg-gray-800"
-    >
-      <Center className="flex-col w-44">
-        <img className="rounded-lg" src={path} alt="" />
-        <Center className="flex-col">
-          <div className="pt-3 text-center text-sm text-wrap">{title}</div>
-          <div className="pt-1 text-center text-sm text-gray-400 text-wrap">
-            {dimensions}
-          </div>
-        </Center>
-      </Center>
-    </div>
+    <Center key={fileName} className="flex flex-col m-4 w-80 lg:w-40">
+      <img src={path} alt="" />
+      <div className="flex flex-col self-start pl-2">
+        <div className="pt-2 text-sm text-wrap">{dimensions}</div>
+        <div className="pt-1 text-sm italic text-gray-300 text-wrap">
+          {title}
+        </div>
+      </div>
+    </Center>
   );
 };
 

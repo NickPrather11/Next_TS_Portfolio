@@ -47,12 +47,22 @@ body {
         bg-slate-300 dark:bg-slate-700;
   }
 
+  .landingCard-row {
+    @apply flex flex-col justify-evenly lg:flex-row;
+  }
+
   .hyperlink {
     @apply underline text-blue-500 hover:text-blue-700 visited:text-purple-600;
   }
 
-  .landingCard-row {
-    @apply flex flex-col justify-evenly lg:flex-row;
+  .internalLink {
+    @apply p-2 text-center rounded-lg 
+        hover:bg-slate-500 hover:bg-opacity-50
+         active:text-slate-800;
+  }
+
+  .activeProjectLink {
+    @apply border border-white;
   }
 }
 

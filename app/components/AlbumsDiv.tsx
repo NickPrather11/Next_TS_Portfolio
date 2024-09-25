@@ -31,7 +31,7 @@ const AlbumsDiv = async () => {
     b.releaseDate > a.releaseDate ? 1 : a.releaseDate > b.releaseDate ? -1 : 0
   );
   return (
-    <ul className="flex flex-wrap justify-center">
+    <ul className="flex flex-wrap justify-center mt-10">
       {albums.map((album: IAlbum) => (
         <li key={album.albumName}>
           <AlbumCard

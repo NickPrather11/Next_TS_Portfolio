@@ -10,12 +10,13 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "big_green_painting": "url('/backgrounds/big_green.jpg')"
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        big_green_painting: "url('/paintings/24x24_Organic_Doorway.jpg')",
       },
     },
   },
-  darkMode: 'media',
-  plugins: [require('@tailwindcss/forms')],
+  darkMode: "media",
+  plugins: [require("@tailwindcss/forms")],
 };
 export default config;
