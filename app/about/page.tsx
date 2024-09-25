@@ -36,7 +36,7 @@ const aboutPage = () => {
           <div id="about_site">
             <p>
               This site is intended to be a portfolio website, as well as a
-              living resume of sorts.
+              living resume. Keep checking back for more updates!
               <br></br>
               <br></br>
               In addition to displaying my past projects and work experience, I
@@ -73,12 +73,13 @@ const aboutPage = () => {
           <p className="font-bold text-lg text-center mb-8">About Nick</p>
           <p>
             Nick Prather is a web developer, multi-instrumentalist musician,
-            recording engineer, writer, and artist. With a Bachelor of Science
-            in Music Technology from University of North Carolina at Asheville
-            (2010), with a dual focus on Electronic Music Composition and Jazz.
-            He has worked in virtually every facet of the music industry:
-            performing, composing, recording, teaching, instrument building and
-            repair, equipment sales, studio consulting, and event management.
+            recording engineer, writer, and artist. Nick completed a Bachelor of
+            Science in Music Technology from the University of North Carolina at
+            Asheville in 2010, with a dual focus on Electronic Music Composition
+            and Jazz Studies. He has worked in virtually every facet of the
+            music industry: performing, composing, recording, teaching,
+            instrument building and repair, equipment sales, studio consulting,
+            and event management.
             <br></br>
             <br></br>
             After completing a 6-month, in-person Full Stack Web Development
@@ -108,10 +109,6 @@ const aboutPage = () => {
             new web development technologies (as exemplified by this website),
             working on art and music projects, and occasionally consulting for a
             few audio equipment manufacturing startups.
-            <br></br>
-            <br></br>
-            For more information on Nick&apos;s career and projects, check out
-            the links below.
           </p>
         </div>
       </Center>

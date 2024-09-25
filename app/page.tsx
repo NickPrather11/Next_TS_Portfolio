@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <Page>
       <Center className="card flex-col mx-8 gap-4 lg:max-w-6xl">
-        <h1>Hi, I&apos;m Nick!</h1>
+        <h1 className="mb-0">Hi, I&apos;m Nick!</h1>
 
         <img src="/AvatarNick.svg" alt="" className="h-80 rounded-xl" />
 
@@ -14,7 +14,7 @@ export default function Home() {
           Full Stack Web Application Developer with a background in
           customer-facing project implementation - specializing in UI
           functionality and data manipulation workflows. Experience in people
-          managment, project managemnet, technical writing, audio/video
+          management, project management, technical writing, audio/video
           production and editing, and more.
         </p>
       </Center>
