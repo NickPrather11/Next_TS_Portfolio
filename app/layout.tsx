@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import dbConnect from "./db/dbConnect";
 import compareAndUpdateAlbums from "@/app/db/controllers/compareAndUpdateAlbums";
 import Navbar from "./components/Navbar";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +30,7 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body className="flex flex-col m-0 p-0 min-h-screen relative pb-40 bg-big_green_painting bg-cover bg-fixed">
         <Navbar />
-        {children}
+        <Suspense fallback={<Loading />}>{children}</Suspense>
         <Footer />
       </body>
     </html>

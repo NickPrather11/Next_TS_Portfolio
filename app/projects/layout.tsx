@@ -1,12 +1,8 @@
 "use client";
 import React, { Suspense, useState } from "react";
-import Loading from "../components/Loading";
+import Loading from "../components/LoadingComponent";
 import Page from "../components/Page";
-import Center from "../components/Center";
 import Link from "next/link";
-import { Outlet, Route, Routes } from "react-router-dom";
-
-const AlbumsDiv = React.lazy(() => import("../components/AlbumsDiv"));
 
 export default function ProjectsLayout({
   children,
@@ -41,7 +37,9 @@ export default function ProjectsLayout({
         </Link>
       </div>
 
-      <Page className="card w-4/5 rounded-2xl">{children}</Page>
+      <Page className="card w-4/5 rounded-2xl">
+        <Suspense fallback={<Loading />}>{children}</Suspense>
+      </Page>
     </Page>
   );
 }
