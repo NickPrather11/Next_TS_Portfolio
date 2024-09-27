@@ -20,6 +20,7 @@ const LandingCard = ({
       key={title}
       href={url}
       target={external ? "_blank" : "_self"}
+      rel={external ? "noopener noreferrer" : ""}
       className="card flex flex-col w-3/4 hover:bg-gray-800 lg:w-1/2"
     >
       <b className="mb-4 text-center text-xl text-wrap">{title}</b>

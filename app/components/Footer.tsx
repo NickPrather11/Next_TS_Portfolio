@@ -13,15 +13,27 @@ const Footer = () => {
     <footer className="footer absolute bottom-0 w-full bg-slate-900">
       <Center className="flex-col pt-4">
         <div className="flex flex-row gap-8 m-2">
-          <Link href="https://github.com/NickPrather11/">
+          <Link
+            href="https://github.com/NickPrather11/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaGithub className="text-3xl" />
           </Link>
 
-          <Link href="https://www.linkedin.com/in/nick-prather-945109101/">
+          <Link
+            href="https://www.linkedin.com/in/nick-prather-945109101/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaLinkedin className="text-3xl" />
           </Link>
 
-          <Link href="https://nickprather.bandcamp.com/">
+          <Link
+            href="https://nickprather.bandcamp.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FaBandcamp className="text-3xl" />
           </Link>
         </div>

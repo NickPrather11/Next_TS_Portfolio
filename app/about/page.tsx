@@ -52,6 +52,7 @@ const aboutPage = () => {
                 href="https://github.com/NickPrather11/Next_TS_Portfolio"
                 className="hyperlink w-full break-words"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 https://github.com/NickPrather11/Next_TS_Portfolio
               </Link>
@@ -62,6 +63,7 @@ const aboutPage = () => {
                 href="https://github.com/users/NickPrather11/projects/1"
                 className="hyperlink w-full break-words"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 https://github.com/users/NickPrather11/projects/1
               </Link>

@@ -64,6 +64,18 @@ body {
   .activeProjectLink {
     @apply border border-white;
   }
+
+  .navlink {
+    @apply p-4 text-lg text-gray-700 
+          dark:text-white 
+          hover:text-gray-500/75;
+  }
+
+  .navlink-sub {
+    @apply m-2 text-sm text-right text-gray-700
+          dark:text-white 
+          hover:text-gray-500/75;
+  }
 }
 
 @layer utilities {
