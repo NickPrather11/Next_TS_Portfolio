@@ -20,6 +20,7 @@ const NavDropdown = ({
     <div className="dropdown">
       {dropdownProps.map((dropLink: NavDropdownLink) => (
         <Link
+          key={dropLink.text}
           href={dropLink.path}
           onClick={() => onUpdateNavDeskLinkState(false)}
         >
