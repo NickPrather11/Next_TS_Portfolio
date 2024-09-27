@@ -12,7 +12,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        big_green_painting: "url('/paintings/24x24_Organic_Doorway.jpg')",
+        big_green_painting: "url('/paintings/24x24_untitled_landscape_2.jpg')",
       },
     },
   },
