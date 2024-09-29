@@ -13,7 +13,10 @@ const PaintingCard = ({ fileName }: PaintingProps) => {
   const dimensions: string = fileName.slice(0, fileName.indexOf("_"));
   const path: string = "/paintings/" + fileName;
   return (
-    <Center key={fileName} className="flex flex-col m-4 w-80 lg:w-40">
+    <Center
+      key={fileName}
+      className="flex flex-col justify-between m-4 w-11/12 md:w-36"
+    >
       <img src={path} alt="" />
       <div className="flex flex-col self-start pl-2">
         <div className="pt-2 text-sm text-wrap">{dimensions}</div>

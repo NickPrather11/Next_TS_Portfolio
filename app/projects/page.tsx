@@ -1,6 +1,4 @@
-import React, { Suspense } from "react";
-import Loading from "../components/LoadingComponent";
-import Page from "../components/Page";
+import React from "react";
 import Center from "../components/Center";
 import Link from "next/link";
 

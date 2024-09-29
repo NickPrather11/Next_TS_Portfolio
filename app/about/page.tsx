@@ -1,8 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import dbSeed from "../db/seeds/dbLogoSeed";
-import TechCard from "../components/TechCard";
-import Page from "../components/Page";
 import Center from "../components/Center";
 
 const aboutPage = () => {
