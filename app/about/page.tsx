@@ -8,14 +8,14 @@ import Center from "../components/Center";
 const aboutPage = () => {
   return (
     <Center>
-      <div className="card flex flex-col gap-4">
+      <Link href="/about/site" className="card flex flex-col gap-4">
         <h3 className="text-nowrap">About This Site</h3>
         <p>Learn more about how this site was created</p>
-      </div>
-      <div className="card flex flex-col gap-4">
+      </Link>
+      <Link href="/about/nick" className="card flex flex-col gap-4">
         <h3 className="text-nowrap">About Nick</h3>
         <p>Learn more about Nick Prather</p>
-      </div>
+      </Link>
     </Center>
   );
 };
