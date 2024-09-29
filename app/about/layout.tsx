@@ -13,7 +13,7 @@ export default function ProjectsLayout({
   return (
     <Page>
       <h1>
-        <Link href="/projects">PROJECTS</Link>
+        <Link href="/about">ABOUT</Link>
       </h1>
 
       <hr className="w-11/12" />
@@ -21,21 +21,21 @@ export default function ProjectsLayout({
       <div className="flex flex-row justify-evenly w-full pt-2">
         <Link
           onClick={() => setActiveLink(1)}
-          href="/projects/music"
+          href="/about/site"
           className={`internalLink ${
             activeLink === 1 ? "activeProjectLink" : ""
           }`}
         >
-          Music
+          This Site
         </Link>
         <Link
           onClick={() => setActiveLink(2)}
-          href="/projects/paintings"
+          href="/about/nick"
           className={`internalLink ${
             activeLink === 2 ? "activeProjectLink" : ""
           }`}
         >
-          Paintings
+          Nick
         </Link>
       </div>
 

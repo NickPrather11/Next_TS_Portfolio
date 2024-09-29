@@ -1,19 +1,61 @@
 "use client";
-import React, { createContext, useState } from "react";
-import { BsChevronDown, BsList } from "react-icons/bs";
+import React, { createContext, ReactNode, useState } from "react";
+import {
+  BsCassette,
+  BsChevronDown,
+  BsFillHouseFill,
+  BsInfoCircle,
+  BsList,
+} from "react-icons/bs";
+import NavbarMobileLink from "./NavbarMobileLink";
 import Link from "next/link";
 import Center from "./Center";
 
 type ExpandedContextType = boolean;
-type ProjectsExpandedContextType = boolean;
 
 const MobileMenuContext = createContext<ExpandedContextType>(false);
-const ProjectsContext = createContext<ProjectsExpandedContextType>(false);
+
+{
+  /* TEMP */
+}
+interface ChildDropdownLink {
+  name: string;
+  path: string;
+}
+
+{
+  /* TEMP */
+}
+interface NavbarMobileLinkProps {
+  name: string;
+  icon: ReactNode;
+  childDropdownBool: boolean;
+  childDropdownContents: ChildDropdownLink[];
+  onParentExpandedStateUpdate: (newStateValue: boolean) => void;
+}
+
+{
+  /* TEMP */
+}
+type ChildExpandedContextType = number;
+
+{
+  /* TEMP */
+}
+const ChildContext = createContext<ChildExpandedContextType>(0);
 
 const NavbarMobile = ({ className }: any) => {
   const [expanded, setExpanded] = useState<ExpandedContextType>(false);
-  const [projectsExpanded, setProjectsExpanded] =
-    useState<ProjectsExpandedContextType>(false);
+  const handleParentExpandedStateUpdate = (newStateValue: boolean) => {
+    setExpanded(newStateValue);
+  };
+
+  {
+    /* TEMP */
+  }
+  const [childExpanded, setChildExpanded] =
+    useState<ChildExpandedContextType>(0);
+
   return (
     <div className={`flex flex-grow justify-end ${className}`}>
       <div className="flex items-center mr-4 text-3xl">
@@ -32,56 +74,167 @@ const NavbarMobile = ({ className }: any) => {
               : "hidden"
           }`}
         >
-          <Link
-            href="../"
-            className="navlink"
-            onClick={() => setExpanded((curr) => !curr)}
-          >
-            Home
-          </Link>
+          {/* TEMP NAVBAR, NO COMPONENTS */}
+          <div className="flex flex-row">
+            <Link
+              href="../"
+              className="flex flex-row navlink gap-2"
+              onClick={() => handleParentExpandedStateUpdate(false)}
+            >
+              <Center className="gap-2">
+                <BsFillHouseFill />
+                Home
+              </Center>
+            </Link>
+          </div>
+
           <hr className="w-full" />
-          <div
-            className="flex flex-row py-4 pl-4 text-lg text-gray-700 
-          dark:text-white"
-            onClick={() => setProjectsExpanded((curr) => !curr)}
-          >
-            <p>Projects</p>
+
+          <div className="flex flex-row justify-between">
+            <Link
+              href="../projects"
+              className="flex flex-row navlink gap-2"
+              onClick={() => handleParentExpandedStateUpdate(false)}
+            >
+              <Center className="gap-2">
+                <BsCassette />
+                Projects
+              </Center>
+            </Link>
             <Center className="mx-4">
-              <BsChevronDown />
+              <button
+                onClick={() =>
+                  childExpanded !== 1
+                    ? setChildExpanded(1)
+                    : setChildExpanded(0)
+                }
+              >
+                <BsChevronDown />
+              </button>
             </Center>
           </div>
-          <ProjectsContext.Provider value={expanded}>
-            <div className={`${projectsExpanded ? "flex flex-col" : "hidden"}`}>
+          <ChildContext.Provider value={childExpanded}>
+            <div
+              className={`${
+                childExpanded === 1 ? "flex flex-col gap-2 py-2 mb-2" : "hidden"
+              }`}
+            >
               <Link
                 href="../projects/music"
-                className="navlink-sub"
                 onClick={() => {
-                  setExpanded((curr) => !curr);
-                  setProjectsExpanded((curr) => !curr);
+                  handleParentExpandedStateUpdate(false);
+                  setChildExpanded(0);
                 }}
               >
-                Music
+                <div className="navlink-sub">Music</div>
               </Link>
               <Link
                 href="../projects/paintings"
-                className="navlink-sub"
                 onClick={() => {
-                  setExpanded((curr) => !curr);
-                  setProjectsExpanded((curr) => !curr);
+                  handleParentExpandedStateUpdate(false);
+                  setChildExpanded(0);
                 }}
               >
-                Paintings
+                <div className="navlink-sub">Paintings</div>
               </Link>
             </div>
-          </ProjectsContext.Provider>
+          </ChildContext.Provider>
+
           <hr className="w-full" />
-          <Link
-            href="../about"
-            className="navlink"
-            onClick={() => setExpanded((curr) => !curr)}
-          >
-            About
-          </Link>
+
+          <div className="flex flex-row justify-between">
+            <Link
+              href="../about"
+              className="flex flex-row navlink gap-2"
+              onClick={() => handleParentExpandedStateUpdate(false)}
+            >
+              <Center className="gap-2">
+                <BsInfoCircle />
+                About
+              </Center>
+            </Link>
+            <Center className="mx-4">
+              <button
+                onClick={() =>
+                  childExpanded !== 2
+                    ? setChildExpanded(2)
+                    : setChildExpanded(0)
+                }
+              >
+                <BsChevronDown />
+              </button>
+            </Center>
+          </div>
+          <ChildContext.Provider value={childExpanded}>
+            <div
+              className={`${
+                childExpanded === 2 ? "flex flex-col gap-2 py-2 mb-2" : "hidden"
+              }`}
+            >
+              <Link
+                href="../about/site"
+                onClick={() => {
+                  handleParentExpandedStateUpdate(false);
+                  setChildExpanded(0);
+                }}
+              >
+                <div className="navlink-sub">About This Site</div>
+              </Link>
+              <Link
+                href="../about/nick"
+                onClick={() => {
+                  handleParentExpandedStateUpdate(false);
+                  setChildExpanded(0);
+                }}
+              >
+                <div className="navlink-sub">About Nick</div>
+              </Link>
+            </div>
+          </ChildContext.Provider>
+
+          {/*   USE THIS ONCE GRANDCHILD SETSTATE INHERITENCE IS FIGURED OUT
+          <NavbarMobileLink
+            name="Home"
+            icon={<BsFillHouseFill />}
+            childDropdownBool={false}
+            childDropdownContents={[]}
+            onParentExpandedStateUpdate={handleParentExpandedStateUpdate}
+          />
+          <hr className="w-full" />
+          <NavbarMobileLink
+            name="Projects"
+            icon={<BsCassette />}
+            childDropdownBool={true}
+            childDropdownContents={[
+              {
+                name: "Music",
+                path: "../projects/music",
+              },
+              {
+                name: "Paintings",
+                path: "../projects/paintings",
+              },
+            ]}
+            onParentExpandedStateUpdate={handleParentExpandedStateUpdate}
+          />
+          <hr className="w-full" />
+          <NavbarMobileLink
+            name="About"
+            icon={<BsInfoCircle />}
+            childDropdownBool={true}
+            childDropdownContents={[
+              {
+                name: "About This Site",
+                path: "../about/site",
+              },
+              {
+                name: "About Nick",
+                path: "../about/nick",
+              },
+            ]}
+            onParentExpandedStateUpdate={handleParentExpandedStateUpdate}
+          />
+          */}
         </div>
       </MobileMenuContext.Provider>
     </div>

@@ -11,16 +11,16 @@ const NavbarDesktop = ({ className }: any) => {
         path="../"
         name="Home"
         icon={<BsFillHouseFill />}
-        dropdown={false}
-        dropdownProps={[]}
+        dropdownBool={false}
+        dropdownContents={[]}
       />
 
       <NavbarDesktopLink
         path="../projects"
         name="Projects"
         icon={<BsCassette />}
-        dropdown={true}
-        dropdownProps={[
+        dropdownBool={true}
+        dropdownContents={[
           {
             path: "../projects/music",
             text: "Music",
@@ -36,8 +36,17 @@ const NavbarDesktop = ({ className }: any) => {
         path="../about"
         name="About"
         icon={<BsInfoCircle />}
-        dropdown={false}
-        dropdownProps={[]}
+        dropdownBool={true}
+        dropdownContents={[
+          {
+            path: "../about/site",
+            text: "About This Site",
+          },
+          {
+            path: "../about/nick",
+            text: "About Nick",
+          },
+        ]}
       />
 
       {/*<NavbarDesktopLink path="../contact" text="Contact" icon={<BsEnvelope />} dropdown={false} dropdownProps={[]} />*/}

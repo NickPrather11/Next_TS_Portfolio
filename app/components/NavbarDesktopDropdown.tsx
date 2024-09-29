@@ -8,17 +8,17 @@ interface NavDropdownLink {
 }
 
 interface DropdownLinkProps {
-  dropdownProps: NavDropdownLink[];
+  dropdownContents: NavDropdownLink[];
   onUpdateNavDeskLinkState: (newValue: boolean) => void;
 }
 
-const NavDropdown = ({
-  dropdownProps,
+const NavbarDesktopDropdown = ({
+  dropdownContents,
   onUpdateNavDeskLinkState,
 }: DropdownLinkProps) => {
   return (
     <div className="dropdown">
-      {dropdownProps.map((dropLink: NavDropdownLink) => (
+      {dropdownContents.map((dropLink: NavDropdownLink) => (
         <Link
           key={dropLink.text}
           href={dropLink.path}
@@ -33,4 +33,4 @@ const NavDropdown = ({
   );
 };
 
-export default NavDropdown;
+export default NavbarDesktopDropdown;

@@ -3,7 +3,7 @@ import React, { createContext, ReactNode, useState } from "react";
 import Link from "next/link";
 import Center from "./Center";
 import { BsChevronDown } from "react-icons/bs";
-import NavDropdown from "./NavDropdown";
+import NavbarDesktopDropdown from "./NavbarDesktopDropdown";
 
 interface NavDropdownLink {
   path: string;
@@ -14,8 +14,8 @@ interface NavLinkProps {
   path: string;
   name: string;
   icon: ReactNode;
-  dropdown: boolean;
-  dropdownProps: NavDropdownLink[];
+  dropdownBool: boolean;
+  dropdownContents: NavDropdownLink[];
 }
 
 type ExpandedContextType = boolean;
@@ -26,8 +26,8 @@ const NavbarDesktopLink = ({
   path,
   name,
   icon,
-  dropdown,
-  dropdownProps,
+  dropdownBool,
+  dropdownContents,
 }: NavLinkProps) => {
   const [expanded, setExpanded] = useState<ExpandedContextType>(false);
 
@@ -45,7 +45,7 @@ const NavbarDesktopLink = ({
           </Center>
         </Link>
 
-        {dropdown ? (
+        {dropdownBool ? (
           <Center>
             <button onClick={() => setExpanded((curr) => !curr)}>
               <BsChevronDown />
@@ -65,8 +65,8 @@ const NavbarDesktopLink = ({
               : "hidden"
           }`}
         >
-          <NavDropdown
-            dropdownProps={dropdownProps}
+          <NavbarDesktopDropdown
+            dropdownContents={dropdownContents}
             onUpdateNavDeskLinkState={handleExpandedStateUpdate}
           />
         </div>

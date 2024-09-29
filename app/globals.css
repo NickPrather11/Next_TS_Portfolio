@@ -62,7 +62,8 @@ body {
   }
 
   .activeProjectLink {
-    @apply border border-white;
+    @apply border border-white
+          bg-slate-500 bg-opacity-50;
   }
 
   .navlink {
