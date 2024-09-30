@@ -32,11 +32,11 @@ const aboutSite = () => {
         </div>
 
         <div id="site_links" className="flex flex-col gap-8 mt-8">
-          <div className="flex flex-row flex-wrap w-full gap-2">
+          <div className="flex flex-row flex-wrap gap-2">
             <p>Site Repo:</p>
             <Link
               href="https://github.com/NickPrather11/Next_TS_Portfolio"
-              className="hyperlink break-words"
+              className="hyperlink w-full break-words"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -47,7 +47,7 @@ const aboutSite = () => {
             <p>Planned Updates:</p>
             <Link
               href="https://github.com/users/NickPrather11/projects/1"
-              className="hyperlink break-words"
+              className="hyperlink w-full break-words"
               target="_blank"
               rel="noopener noreferrer"
             >
