@@ -56,14 +56,9 @@ body {
   }
 
   .internalLink {
-    @apply p-2 text-center rounded-lg 
+    @apply p-2 text-center rounded-lg border border-white
         hover:bg-slate-500 hover:bg-opacity-50
          active:text-slate-800;
-  }
-
-  .activeProjectLink {
-    @apply border border-white
-          bg-slate-500 bg-opacity-50;
   }
 
   .navlink {

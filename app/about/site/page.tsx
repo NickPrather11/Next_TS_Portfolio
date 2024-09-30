@@ -13,19 +13,21 @@ interface ILogo {
 const aboutSite = () => {
   const item: Array<ILogo> = dbSeed;
   return (
-    <Center className="flex flex-col">
-      <div className="card w-4/5">
+    <Center className="flex-col">
+      <div className="card w-full">
         <p className="font-bold text-lg text-center mb-8">About This Site</p>
 
         <div id="about_site">
           <p>
-            This site is intended to be a portfolio website, as well as a living
-            resume. Keep checking back for more updates!
+            Thanks for checking out my portfolio! This site is a responsive
+            React web application built with the Next.js framework in a Node
+            environment using Typescript as the base language. Styling has been
+            added using TailwindCSS. This site contains data retrieved from a
+            MongoDB database using Mongoose.
             <br></br>
             <br></br>
-            In addition to displaying my past projects and work experience, I am
-            providing access to the code repository and the project board used
-            to track updates and bug fixes.
+            If you'd like to check out the code repo for this site and see the
+            updates I have planned, see the links below.
           </p>
         </div>
 
@@ -55,7 +57,7 @@ const aboutSite = () => {
         </div>
       </div>
 
-      <Center id="tech_display" className="flex-col card gap-8">
+      <Center id="tech_display" className="flex-col card w-full gap-8">
         <p className="italic text-sm">
           This site was built using the following technologies
         </p>

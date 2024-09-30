@@ -18,28 +18,28 @@ export default function ProjectsLayout({
 
       <hr className="w-11/12" />
 
-      <div className="flex flex-row justify-evenly w-full pt-2">
+      <div className="flex flex-row justify-evenly w-full pt-2 md:justify-start md:gap-10 md:w-11/12">
         <Link
           onClick={() => setActiveLink(1)}
           href="/about/site"
           className={`internalLink ${
-            activeLink === 1 ? "activeProjectLink" : ""
+            activeLink === 1 ? "bg-slate-500 bg-opacity-50" : ""
           }`}
         >
-          This Site
+          About This Site
         </Link>
         <Link
           onClick={() => setActiveLink(2)}
           href="/about/nick"
           className={`internalLink ${
-            activeLink === 2 ? "activeProjectLink" : ""
+            activeLink === 2 ? "bg-slate-500 bg-opacity-50" : ""
           }`}
         >
-          Nick
+          About Nick
         </Link>
       </div>
 
-      <Page className="w-4/5">
+      <Page className="w-11/12">
         <Suspense fallback={<Loading />}>{children}</Suspense>
       </Page>
     </Page>

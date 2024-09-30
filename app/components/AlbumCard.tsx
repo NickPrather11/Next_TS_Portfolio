@@ -25,7 +25,7 @@ const AlbumCard = ({
       href={bandcampURL}
       target="_blank"
       rel="noopener noreferrer"
-      className="projCardParent flex justify-center h-[19rem] w-64 hover:bg-gray-800"
+      className="projCardParent flex justify-center h-[19rem] w-64 py-2 mb-2 rounded-xl hover:bg-gray-800"
     >
       <Center className="albumCover absolute flex-col w-36 transition-all duration-300">
         <img className="albumCover rounded-lg" src={albumImg} alt="" />

@@ -31,7 +31,7 @@ const projectsPage = async () => {
     b.releaseDate > a.releaseDate ? 1 : a.releaseDate > b.releaseDate ? -1 : 0
   );
   return (
-    <div className="card rounded-2xl">
+    <div className="card">
       <div className="flex flex-col items-center gap-4">
         <h3>Music</h3>
         <p className="italic text-sm">

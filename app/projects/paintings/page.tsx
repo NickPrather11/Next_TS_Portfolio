@@ -7,7 +7,7 @@ const projectsPage = async () => {
   const paintings: string[] = fs.readdirSync("./public/paintings/");
 
   return (
-    <div className="card rounded-2xl">
+    <div className="card">
       <div className="flex flex-col items-center gap-4">
         <h3>Paintings</h3>
         <p className="italic text-sm">Original paintings (acrylic on canvas)</p>
