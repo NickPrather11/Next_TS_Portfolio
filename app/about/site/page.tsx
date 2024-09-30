@@ -14,7 +14,7 @@ const aboutSite = () => {
   const item: Array<ILogo> = dbSeed;
   return (
     <Center className="flex-col">
-      <div className="card w-full">
+      <div className="card w-full lg:w-8/12">
         <p className="font-bold text-lg text-center mb-8">About This Site</p>
 
         <div id="about_site">
@@ -26,28 +26,28 @@ const aboutSite = () => {
             MongoDB database using Mongoose.
             <br></br>
             <br></br>
-            If you'd like to check out the code repo for this site and see the
-            updates I have planned, see the links below.
+            If you&apos;d like to check out the code repo for this site and see
+            the updates I have planned, see the links below.
           </p>
         </div>
 
         <div id="site_links" className="flex flex-col gap-8 mt-8">
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-row flex-wrap gap-2">
             <p>Site Repo:</p>
             <Link
               href="https://github.com/NickPrather11/Next_TS_Portfolio"
-              className="hyperlink w-full break-words"
+              className="hyperlink break-words"
               target="_blank"
               rel="noopener noreferrer"
             >
               https://github.com/NickPrather11/Next_TS_Portfolio
             </Link>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-row flex-wrap gap-2">
             <p>Planned Updates:</p>
             <Link
               href="https://github.com/users/NickPrather11/projects/1"
-              className="hyperlink w-full break-words"
+              className="hyperlink break-words"
               target="_blank"
               rel="noopener noreferrer"
             >
