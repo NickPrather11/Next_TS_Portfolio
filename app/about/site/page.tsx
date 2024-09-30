@@ -13,8 +13,8 @@ interface ILogo {
 const aboutSite = () => {
   const item: Array<ILogo> = dbSeed;
   return (
-    <Center className="flex-col">
-      <div className="card w-full lg:w-8/12">
+    <Center className="flex-col w-full px-6 m-4">
+      <div className="card md:w-8/12">
         <p className="font-bold text-lg text-center mb-8">About This Site</p>
 
         <div id="about_site">

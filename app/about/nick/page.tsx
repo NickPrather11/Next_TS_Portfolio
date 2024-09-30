@@ -3,7 +3,7 @@ import React from "react";
 
 const aboutNick = () => {
   return (
-    <Center className="card flex-col w-full">
+    <Center className="card flex-col w-full md:w-8/12">
       <p className="font-bold text-lg text-center mb-8">About Nick</p>
       <p>
         Nick Prather is a web developer, multi-instrumentalist musician,
