@@ -13,7 +13,7 @@ interface ILogo {
 const aboutSite = () => {
   const item: Array<ILogo> = dbSeed;
   return (
-    <Center className="flex-col w-full px-6 m-4">
+    <Center className="flex-col px-6 m-4">
       <div className="card md:w-8/12">
         <p className="font-bold text-lg text-center mb-8">About This Site</p>
 
@@ -32,7 +32,7 @@ const aboutSite = () => {
         </div>
 
         <div id="site_links" className="flex flex-col gap-8 mt-8">
-          <div className="flex flex-row flex-wrap gap-2">
+          <div className="flex flex-row flex-wrap w-full gap-2">
             <p>Site Repo:</p>
             <Link
               href="https://github.com/NickPrather11/Next_TS_Portfolio"
