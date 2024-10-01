@@ -14,8 +14,8 @@ interface ILogo {
 const aboutSite = () => {
   const item: Array<ILogo> = dbSeed;
   return (
-    <Center className="flex-col max-w-[80%]">
-      <Card className="md:w-8/12">
+    <Center className="flex-col">
+      <Card className="sm:w-24 md:w-8/12">
         <h2 className="text-center">About This Site</h2>
 
         <p>
@@ -26,33 +26,29 @@ const aboutSite = () => {
           using Mongoose.
           <br></br>
           <br></br>
-          If you&apos;d like to check out the code repo for this site and see
-          the updates I have planned, see the links below.
+          <p className="text-center">
+            If you&apos;d like to check out the code repo for this site and see
+            the updates I have planned, see the links below.
+          </p>
         </p>
 
-        <div className="flex flex-col gap-8 mt-8">
-          <div className="flex flex-row flex-wrap gap-2">
-            <p>Site Repo:</p>
-            <Link
-              href="https://github.com/NickPrather11/Next_TS_Portfolio"
-              className="underline text-blue-500 hover:text-blue-700 visited:text-purple-600 w-full text-sm break-words"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              https://github.com/NickPrather11/Next_TS_Portfolio
-            </Link>
-          </div>
-          <div className="flex flex-row flex-wrap gap-2">
-            <p>Planned Updates:</p>
-            <Link
-              href="https://github.com/users/NickPrather11/projects/1"
-              className="underline text-blue-500 hover:text-blue-700 visited:text-purple-600 w-full text-sm break-words"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              https://github.com/users/NickPrather11/projects/1
-            </Link>
-          </div>
+        <div className="flex justify-evenly mt-8">
+          <Link
+            href="https://github.com/NickPrather11/Next_TS_Portfolio"
+            className="text-center text-2xl underline text-blue-500 hover:text-blue-700 visited:text-purple-600 "
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Site Repo
+          </Link>
+          <Link
+            href="https://github.com/users/NickPrather11/projects/1"
+            className="text-center text-2xl underline text-blue-500 hover:text-blue-700 visited:text-purple-600 "
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Planned Updates
+          </Link>
         </div>
       </Card>
 
