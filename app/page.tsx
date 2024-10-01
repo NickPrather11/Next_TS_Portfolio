@@ -1,3 +1,4 @@
+import Card from "./components/Card";
 import Center from "./components/Center";
 import LandingCard from "./components/LandingCard";
 import Page from "./components/Page";
@@ -5,19 +6,21 @@ import Page from "./components/Page";
 export default function Home() {
   return (
     <Page>
-      <Center className="card flex-col mx-8 gap-4 lg:max-w-6xl">
-        <h1 className="mb-0">Hi, I&apos;m Nick!</h1>
+      <Card>
+        <Center className="flex-col mx-8 gap-4 lg:max-w-6xl">
+          <h1 className="mb-0">Hi, I&apos;m Nick!</h1>
 
-        <img src="/AvatarNick.svg" alt="" className="h-80 rounded-xl" />
+          <img src="/AvatarNick.svg" alt="" className="h-80 rounded-xl" />
 
-        <p className="text-lg text-center">
-          Full Stack Web Application Developer with a background in
-          customer-facing project implementation - specializing in UI
-          functionality and data manipulation workflows. Experience in people
-          management, project management, technical writing, audio/video
-          production and editing, and more.
-        </p>
-      </Center>
+          <p className="text-lg text-center">
+            Full Stack Web Application Developer with a background in
+            customer-facing project implementation - specializing in UI
+            functionality and data manipulation workflows. Experience in people
+            management, project management, technical writing, audio/video
+            production and editing, and more.
+          </p>
+        </Center>
+      </Card>
 
       {/* Testing for background slideshow implementation 
       <div className="flex justify-center m-10 bg-gray-800">
@@ -27,7 +30,7 @@ export default function Home() {
       */}
 
       <Center id="all_landing_cards" className="flex flex-col w-full m-8">
-        <Center className="landingCard-row">
+        <Center className="flex-col justify-evenly lg:flex-row">
           <LandingCard
             url="https://github.com/NickPrather11/Next_TS_Portfolio"
             title="Site Repo"
@@ -43,7 +46,7 @@ export default function Home() {
           />
         </Center>
 
-        <Center className="landingCard-row">
+        <Center className="flex-col justify-evenly lg:flex-row">
           <LandingCard
             url="./projects"
             title="Projects"

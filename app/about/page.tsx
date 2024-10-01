@@ -1,18 +1,23 @@
 import React from "react";
 import Link from "next/link";
 import Center from "../components/Center";
+import Card from "../components/Card";
 
 const aboutPage = () => {
   return (
-    <Center>
-      <Link href="/about/site" className="card flex flex-col gap-4">
-        <h3 className="text-nowrap">About This Site</h3>
-        <p>Learn more about how this site was created</p>
-      </Link>
-      <Link href="/about/nick" className="card flex flex-col gap-4">
-        <h3 className="text-nowrap">About Nick</h3>
-        <p>Learn more about Nick Prather</p>
-      </Link>
+    <Center className="flex-col md:flex-row md:flex-wrap">
+      <Card>
+        <Link href="/about/site" className="flex flex-col items-center">
+          <h3 className="text-nowrap">About This Site</h3>
+          <p>Learn more about how this site was created</p>
+        </Link>
+      </Card>
+      <Card>
+        <Link href="/about/nick" className="flex flex-col items-center">
+          <h3 className="text-nowrap">About Nick</h3>
+          <p>Learn more about Nick Prather</p>
+        </Link>
+      </Card>
     </Center>
   );
 };

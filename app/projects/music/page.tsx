@@ -1,5 +1,6 @@
 import React from "react";
 import AlbumCard from "@/app/components/AlbumCard";
+import Card from "@/app/components/Card";
 
 interface IAlbum {
   albumName: string;
@@ -31,9 +32,9 @@ const projectsPage = async () => {
     b.releaseDate > a.releaseDate ? 1 : a.releaseDate > b.releaseDate ? -1 : 0
   );
   return (
-    <div className="card">
+    <Card>
       <div className="flex flex-col items-center gap-4">
-        <h3>Music</h3>
+        <h2>Music</h2>
         <p className="italic text-sm">
           I have recorded a lot of music in my life. Here is what is currently
           available.
@@ -53,7 +54,7 @@ const projectsPage = async () => {
           </li>
         ))}
       </ul>
-    </div>
+    </Card>
   );
 };
 

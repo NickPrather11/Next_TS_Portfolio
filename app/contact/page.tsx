@@ -1,5 +1,6 @@
 import React from "react";
 import Page from "../components/Page";
+import Card from "../components/Card";
 
 const contactPage = () => {
   return (
@@ -15,7 +16,7 @@ const contactPage = () => {
             </p>
           </div>
 
-          <div className="card lg:col-span-3 lg:p-12">
+          <Card className="lg:col-span-3 lg:p-12">
             <form action="#" className="space-y-4">
               <div>
                 <label className="sr-only" /*for="name"*/>Name</label>
@@ -69,7 +70,7 @@ const contactPage = () => {
                 </button>
               </div>
             </form>
-          </div>
+          </Card>
         </div>
       </section>
     </Page>

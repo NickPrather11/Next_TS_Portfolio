@@ -2,12 +2,13 @@ import React, { Suspense } from "react";
 import fs from "fs";
 import PaintingCard from "@/app/components/PaintingCard";
 import Loading from "../loading";
+import Card from "@/app/components/Card";
 
 const projectsPage = async () => {
   const paintings: string[] = fs.readdirSync("./public/paintings/");
 
   return (
-    <div className="card">
+    <Card>
       <div className="flex flex-col items-center gap-4">
         <h3>Paintings</h3>
         <p className="italic text-sm">Original paintings (acrylic on canvas)</p>
@@ -22,7 +23,7 @@ const projectsPage = async () => {
           </li>
         ))}
       </ul>
-    </div>
+    </Card>
   );
 };
 
