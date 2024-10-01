@@ -15,7 +15,7 @@ const aboutSite = () => {
   const item: Array<ILogo> = dbSeed;
   return (
     <Center className="flex-col">
-      <Card className="sm:w-24 md:w-8/12">
+      <Card className="md:w-8/12">
         <h2 className="text-center">About This Site</h2>
 
         <p>
@@ -35,7 +35,7 @@ const aboutSite = () => {
         <div className="flex justify-evenly mt-8">
           <Link
             href="https://github.com/NickPrather11/Next_TS_Portfolio"
-            className="text-center text-2xl underline text-blue-500 hover:text-blue-700 visited:text-purple-600 "
+            className="text-center text-xl underline text-blue-500 hover:text-blue-700 visited:text-purple-600 "
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -43,7 +43,7 @@ const aboutSite = () => {
           </Link>
           <Link
             href="https://github.com/users/NickPrather11/projects/1"
-            className="text-center text-2xl underline text-blue-500 hover:text-blue-700 visited:text-purple-600 "
+            className="text-center text-xl underline text-blue-500 hover:text-blue-700 visited:text-purple-600 "
             target="_blank"
             rel="noopener noreferrer"
           >
