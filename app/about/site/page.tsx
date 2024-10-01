@@ -61,15 +61,14 @@ const aboutSite = () => {
           <p className="italic text-sm">
             This site was built using the following technologies
           </p>
-          <ul className="flex flex-wrap justify-evenly items-center gap-12">
+          <ul className="flex flex-wrap justify-around items-center gap-4">
             {item.map((logo: ILogo) => (
-              <div key={logo.name}>
-                <TechCard
-                  name={logo.name}
-                  url={logo.url}
-                  imgFile={logo.imgFile}
-                />
-              </div>
+              <TechCard
+                key={logo.name}
+                name={logo.name}
+                url={logo.url}
+                imgFile={logo.imgFile}
+              />
             ))}
           </ul>
         </Center>
