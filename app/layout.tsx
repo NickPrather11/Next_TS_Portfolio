@@ -28,7 +28,7 @@ export default function RootLayout({
   intializeDB();
   return (
     <html lang="en" className={inter.className}>
-      <body className="flex flex-col m-0 p-0 min-h-screen relative pb-40 bg-big_green_painting bg-cover bg-fixed">
+      <body className="flex flex-col m-0 p-0 min-h-screen relative pb-40 bg-big_green_painting bg-cover bg-fixed backdrop-brightness-[80%] text-black dark:text-white">
         <Navbar />
         <Suspense fallback={<Loading />}>{children}</Suspense>
         <Footer />

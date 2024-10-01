@@ -12,13 +12,15 @@ export default function ProjectsLayout({
   const [activeLink, setActiveLink] = useState(0);
   return (
     <Page>
-      <h1>
-        <Link href="/projects">PROJECTS</Link>
-      </h1>
+      <div className="flex justify-center w-full bg-slate-700 bg-opacity-90">
+        <h1 className="pt-6 pb-10">
+          <Link href="/projects">PROJECTS</Link>
+        </h1>
+      </div>
 
-      <hr className="w-11/12" />
+      <hr className="mt-2 w-11/12 md:w-7/12" />
 
-      <div className="flex flex-row justify-evenly w-full pt-2 md:justify-start md:gap-10 md:w-11/12">
+      <div className="flex flex-row justify-evenly w-full pt-2 md:justify-center md:gap-10 md:w-7/12">
         <Link
           onClick={() => setActiveLink(1)}
           href="/projects/music"

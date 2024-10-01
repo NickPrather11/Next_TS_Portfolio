@@ -10,7 +10,7 @@ const projectsPage = async () => {
   return (
     <Card>
       <div className="flex flex-col items-center gap-4">
-        <h3>Paintings</h3>
+        <h2>Paintings</h2>
         <p className="italic text-sm">Original paintings (acrylic on canvas)</p>
       </div>
 
