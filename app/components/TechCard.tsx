@@ -9,7 +9,7 @@ type TechProps = {
 const TechCard = ({ name, url, imgFile }: TechProps) => {
   return (
     <li className="flex m-2 rounded-lg bg-slate-200">
-      <img className="w-32 h-auto p-4" src={imgFile} alt={url} />
+      <img className="p-2 w-24 md:w-32 " src={imgFile} alt={url} />
     </li>
   );
 };

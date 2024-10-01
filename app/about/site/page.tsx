@@ -61,7 +61,7 @@ const aboutSite = () => {
           <p className="italic text-sm">
             This site was built using the following technologies
           </p>
-          <ul className="flex flex-wrap justify-around items-center gap-4">
+          <ul className="flex flex-wrap justify-around items-center gap-2">
             {item.map((logo: ILogo) => (
               <TechCard
                 key={logo.name}
