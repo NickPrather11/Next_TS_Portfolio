@@ -33,17 +33,17 @@ const F2B = ({ ...props }: any) => {
         Carolina. Field2Base&apos;s services include data collection and
         workflow process optimization by converting clients&apos; paper forms
         into electronic forms accessed via the Field2Base Mobile Forms App. The
-        "eForms" are created in F2B&apos;s proprietary Forms Designer software,
-        which is used to apply UI elements and allows UI logic to be added via
-        JavaScript. The data submitted in these eForms can be transformed with
-        XML Workflow Definitions and sent to the F2B Integration engine to be
-        downloaded by clients via remote F2B Integration software suite
-        installations. Data can also be sent to an analytics database, delivered
-        in custom HTML email templates, and used to pre-populate other eForms.
-        The submitted forms and the data they contain are then accessed on the
-        Field2Base Web Portal. Submitted data can be viewed in analytics
-        dashboards created in Sisense/Periscope using SQL queries and Sisense
-        GUIs.
+        &quot;eForms&quot; are created in F2B&apos;s proprietary Forms Designer
+        software, which is used to apply UI elements and allows UI logic to be
+        added via JavaScript. The data submitted in these eForms can be
+        transformed with XML Workflow Definitions and sent to the F2B
+        Integration engine to be downloaded by clients via remote F2B
+        Integration software suite installations. Data can also be sent to an
+        analytics database, delivered in custom HTML email templates, and used
+        to pre-populate other eForms. The submitted forms and the data they
+        contain are then accessed on the Field2Base Web Portal. Submitted data
+        can be viewed in analytics dashboards created in Sisense/Periscope using
+        SQL queries and Sisense GUIs.
         <br></br>
         <br></br>
         Starting out as a Technical Implementation Engineer in the Professional
@@ -80,8 +80,8 @@ const F2B = ({ ...props }: any) => {
               <li>
                 Gathered requirements and performed custom project
                 implementations including complex form logic and workflows,
-                graphic design and layout, and “eForm” UI for new, existing, and
-                potential clients
+                graphic design and layout, and &quot;eForm&quot; UI for new,
+                existing, and potential clients
               </li>
               <li>Created analytics dashboards using Sisense/Periscope</li>
               <li>
