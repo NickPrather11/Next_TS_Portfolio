@@ -8,16 +8,16 @@ export default function Home() {
     <Page>
       <Card>
         <Center className="flex-col mx-8 gap-4 lg:max-w-6xl">
-          <h1 className="mb-0">Hi, I&apos;m Nick!</h1>
+          <p className="text-3xl font-bold">Hi, I&apos;m Nick!</p>
 
           <img src="/AvatarNick.svg" alt="" className="h-80 rounded-xl" />
 
           <p className="text-lg text-center">
             Full Stack Web Application Developer with a background in
             customer-facing project implementation - specializing in UI
-            functionality and data manipulation workflows. Experience in people
-            management, project management, technical writing, audio/video
-            production and editing, and more.
+            functionality and data transformation. Additional experience in
+            people management, project management, technical writing,
+            audio/video production and editing, and more.
           </p>
         </Center>
       </Card>

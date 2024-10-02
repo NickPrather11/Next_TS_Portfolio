@@ -13,18 +13,18 @@ export default function ProjectsLayout({
   return (
     <Page>
       <div className="flex justify-center w-full bg-slate-700 bg-opacity-90">
-        <h1 className="pt-6 pb-10">
+        <h1 className="py-6">
           <Link href="/about">ABOUT</Link>
         </h1>
       </div>
 
-      <hr className="mt-2 w-11/12 md:w-7/12" />
+      <hr className="mt-6 w-11/12 md:w-7/12" />
 
       <div className="flex flex-row justify-evenly w-full pt-2 md:justify-center md:gap-10 md:w-7/12">
         <Link
           onClick={() => setActiveLink(1)}
           href="/about/site"
-          className={`internalLink ${
+          className={`tab-link ${
             activeLink === 1 ? "bg-slate-500 bg-opacity-50" : ""
           }`}
         >
@@ -33,7 +33,7 @@ export default function ProjectsLayout({
         <Link
           onClick={() => setActiveLink(2)}
           href="/about/nick"
-          className={`internalLink ${
+          className={`tab-link ${
             activeLink === 2 ? "bg-slate-500 bg-opacity-50" : ""
           }`}
         >

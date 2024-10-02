@@ -17,17 +17,17 @@ const NavbarMobileChildDropdown = ({
 }: ChildDropdownProps) => {
   return (
     <div>
-      {/* 
       {dropdownContents.map((dropLink: ChildDropdownLinkProps) => {
-        <Link
-          key={dropLink.name}
-          href={dropLink.path}
-          onClick={() => onStateUpdates(false)}
-        >
-          <div className="navlink-sub">{dropLink.name}</div>
-        </Link>;
+        return (
+          <Link
+            key={dropLink.name}
+            href={dropLink.path}
+            onClick={() => onStateUpdates(false)}
+          >
+            <div className="navlink-sub">{dropLink.name}</div>
+          </Link>
+        );
       })}
-        */}
     </div>
   );
 };
