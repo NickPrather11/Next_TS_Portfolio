@@ -12,10 +12,10 @@ const aboutNick = () => {
       <Card>
         <h2 className="text-center">About Nick</h2>
         <p>
-          Nick Prather is a full Stack Web Application Developer with a
+          Nick Prather is a full-stack web application developer with a
           background in customer-facing project implementation - specializing in
           UI functionality and data transformation. Additional experience in API
-          devlopment, people management, project management, technical writing,
+          development, people management, project management, technical writing,
           audio/video production and editing, and more.
         </p>
         <br></br>

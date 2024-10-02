@@ -47,7 +47,7 @@ const F2B = ({ ...props }: any) => {
         <br></br>
         <br></br>
         Starting out as a Technical Implementation Engineer in the Professional
-        Services (P.S.) Department, he utilized the Javascript and SQL skills he
+        Services (P.S.) Department, he utilized the JavaScript and SQL skills he
         learned in bootcamp and quickly adapted to the demands of a
         client-facing project implementation position, while mastering the
         proprietary technology offered by Field2Base. By 2022, he was promoted
