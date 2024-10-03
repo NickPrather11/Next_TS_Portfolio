@@ -55,14 +55,12 @@ body {
   }
 
   .navlink {
-    @apply p-4 text-lg text-gray-700 
-          dark:text-white 
+    @apply p-4 text-lg text-white 
           hover:text-gray-500/75;
   }
 
   .navlink-sub {
-    @apply m-2 text-sm text-right text-gray-700
-          dark:text-white 
+    @apply m-2 text-sm text-right text-white 
           hover:text-gray-500/75;
   }
 
