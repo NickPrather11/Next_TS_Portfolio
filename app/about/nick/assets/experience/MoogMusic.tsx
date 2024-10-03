@@ -13,7 +13,14 @@ const MoogMusic = ({ ...props }: any) => {
       <p className="italic">
         Calibration Technician, Testing Technician, Repair Technician
       </p>
-      <p className="pt-2 pl-4">JOB DESCRIPTION</p>
+      <ul className="list-disc pl-4 [&_ul]:list-[revert]">
+        <li>
+          Calibration, Testing, and QC on all product lines using multimeters
+          and oscilloscopes
+        </li>
+        <li>Assembly (including electronic soldering) and firmware loading</li>
+        <li>Analog circuit board troubleshooting and repair</li>
+      </ul>
     </div>
   );
 };

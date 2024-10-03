@@ -9,8 +9,11 @@ const ProfessionalExperience = ({ ...props }: any) => {
     <div className="flex flex-col gap-6" {...props}>
       <h3>Professional Experience</h3>
       <F2B id="f2b" />
+      <br></br>
       <SoundPure id="soundpure" />
+      <br></br>
       <MoogMusic id="moog" />
+      <br></br>
       <FreelanceAudio id="freelance_audio" />
     </div>
   );

@@ -8,7 +8,19 @@ const SoundPure = ({ ...props }: any) => {
         <h5 className="align-center">Sep 2014 - Sep 2015</h5>
       </div>
       <p className="italic">Pro Audio Sales Expert</p>
-      <p className="pt-2 pl-4">JOB DESCRIPTION</p>
+      <ul className="list-disc pl-4 [&_ul]:list-[revert]">
+        <li>
+          Online, phone, and in-person sales of boutique recording equipment
+        </li>
+        <li>Consulted for professional and amateur recording studios</li>
+        <li>
+          Maintained customer information and outreach cycles in custom CRM
+        </li>
+        <li>
+          Provided equipment discussion and comparison content for marketing
+          videos
+        </li>
+      </ul>
     </div>
   );
 };

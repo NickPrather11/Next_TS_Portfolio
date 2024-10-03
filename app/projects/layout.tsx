@@ -41,7 +41,7 @@ export default function ProjectsLayout({
         </Link>
       </div>
 
-      <Page className="w-11/12">
+      <Page className="lg:w-11/12">
         <Suspense fallback={<Loading />}>{children}</Suspense>
       </Page>
     </Page>

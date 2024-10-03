@@ -79,9 +79,13 @@ const F2B = ({ ...props }: any) => {
               <li>Met with key stakeholders for solutions development</li>
               <li>
                 Gathered requirements and performed custom project
-                implementations including complex form logic and workflows,
-                graphic design and layout, and &quot;eForm&quot; UI for new,
-                existing, and potential clients
+                implementations for new, existing, and potential clients
+                <ul className="pl-8">
+                  <li>Complex form logic and workflows</li>
+                  <li>Workflow/process (re)design and development</li>
+                  <li>eForm UI</li>
+                  <li>Graphic design and layout</li>
+                </ul>
               </li>
               <li>Created analytics dashboards using Sisense/Periscope</li>
               <li>
@@ -147,7 +151,6 @@ const F2B = ({ ...props }: any) => {
             product usage, edited audio and video, etc.
           </li>
         </ul>
-        <br></br>
         <br></br>
         <p>
           Having made the difficult decision to leave his career at Field2Base
