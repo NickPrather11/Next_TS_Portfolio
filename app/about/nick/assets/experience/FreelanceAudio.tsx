@@ -11,9 +11,9 @@ const FreelanceAudio = ({ ...props }: any) => {
       <p className="font-bold">Teaching</p>
       <ul className="list-disc pl-4 [&_ul]:list-[revert]">
         <li>
-          The Raleigh Musicina's Learning Center (2018-2019)
+          The Raleigh Musician&apos;s Learning Center (2018-2019)
           <ul className="pl-4">
-            <li>Percussion and Guitar instructor, ages 5-50</li>
+            <li>Percussion and Guitar Instructor, ages 5-50</li>
           </ul>
         </li>
         <li>
@@ -52,6 +52,7 @@ const FreelanceAudio = ({ ...props }: any) => {
         <li>
           The River Otters (2016-2018)
           <ul className="pl-4">
+            <li>3 member folk-rock and blues band</li>
             <li>Bass guitarist for live performances</li>
             <li>
               Assistant Engineer and Assistant Producer for self-titled album
@@ -63,8 +64,8 @@ const FreelanceAudio = ({ ...props }: any) => {
           TTRROLL (2013)
           <ul className="pl-4">
             <li>
-              Experimental ensemble improvisation and perfomance art at Black
-              Mountain College &#123;Re&#125;HAPPENING
+              6 member experimental ensemble improvisation and perfomance art at
+              Black Mountain College &#123;Re&#125;HAPPENING
             </li>
           </ul>
         </li>
@@ -77,7 +78,7 @@ const FreelanceAudio = ({ ...props }: any) => {
         <li>
           Clouds of Greer (2011-2013)
           <ul className="pl-4">
-            <li>Americana/Folk-Rock band led by Jason Daniello</li>
+            <li>4-5 member Americana/Folk-Rock band led by Jason Daniello</li>
           </ul>
         </li>
         <li>Various other bands, performances, recordings</li>
