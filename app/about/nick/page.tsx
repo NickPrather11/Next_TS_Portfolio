@@ -1,16 +1,20 @@
 import React from "react";
 import Card from "@/app/components/Card";
 import Center from "@/app/components/Center";
-import TOC from "./assets/TOC";
-import ProfessionalExperience from "./assets/ProfessionalExperience";
-import Education from "./assets/Education";
-import LanguagesAndTech from "./assets/LanguagesAndTech";
+import TOC from "./pageComponents/TOC";
+import ProfessionalExperience from "./pageComponents/ProfessionalExperience";
+import Education from "./pageComponents/Education";
+import LanguagesAndTech from "./pageComponents/LanguagesAndTech";
+import Link from "next/link";
+import { FaArrowCircleUp } from "react-icons/fa";
 
 const aboutNick = () => {
   return (
-    <Center className="flex-col md:w-9/12">
-      <Card>
-        <h2 className="text-center">About Nick</h2>
+    <Center className="md:w-9/12">
+      <Card className="flex flex-col">
+        <h2 id="top" className="text-center">
+          About Nick
+        </h2>
         <p>
           Nick Prather is a full-stack web application developer with a
           background in customer-facing project implementation - specializing in
@@ -23,10 +27,31 @@ const aboutNick = () => {
         <TOC />
         <hr className="my-10 w-full" />
         <ProfessionalExperience id="professional_experience" />
+        <Link
+          href="#top"
+          className="link flex flex-row items-center self-end mt-12 gap-2"
+        >
+          Back To Top
+          <FaArrowCircleUp />
+        </Link>
         <hr className="my-10 w-full" />
         <LanguagesAndTech id="languages_and_tech" />
+        <Link
+          href="#top"
+          className="link flex flex-row items-center self-end mt-12 gap-2"
+        >
+          Back To Top
+          <FaArrowCircleUp />
+        </Link>
         <hr className="my-10 w-full" />
         <Education id="education" />
+        <Link
+          href="#top"
+          className="link flex flex-row items-center self-end mt-12 gap-2"
+        >
+          Back To Top
+          <FaArrowCircleUp />
+        </Link>
         <hr className="my-10 w-full" />
         <div id="additional_background" className="flex flex-col">
           <h3>Additional Background</h3>
@@ -38,6 +63,13 @@ const aboutNick = () => {
           building and repair, equipment sales, studio consulting, and event
           management.
         </p>
+        <Link
+          href="#top"
+          className="link flex flex-row items-center self-end mt-12 gap-2"
+        >
+          Back To Top
+          <FaArrowCircleUp />
+        </Link>
       </Card>
     </Center>
   );
