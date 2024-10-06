@@ -1,6 +1,6 @@
 import React from "react";
 import LoadingComponent from "./components/LoadingComponent";
-import Center from "./components/Center";
+import Center from "./components/util/Center";
 
 const Loading = () => {
   return (

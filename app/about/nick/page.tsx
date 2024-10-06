@@ -1,10 +1,10 @@
 import React from "react";
-import Card from "@/app/components/Card";
-import Center from "@/app/components/Center";
-import TOC from "./pageComponents/TOC";
-import ProfessionalExperience from "./pageComponents/ProfessionalExperience";
-import Education from "./pageComponents/Education";
-import LanguagesAndTech from "./pageComponents/LanguagesAndTech";
+import Card from "@/app/components/util/Card";
+import Center from "@/app/components/util/Center";
+import TOC from "./components/TOC";
+import ProfessionalExperience from "./components/ProfessionalExperience";
+import Education from "./components/Education";
+import LanguagesAndTech from "./components/LanguagesAndTech";
 import Link from "next/link";
 import { FaArrowCircleUp } from "react-icons/fa";
 

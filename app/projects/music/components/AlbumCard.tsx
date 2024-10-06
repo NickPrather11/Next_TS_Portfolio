@@ -1,7 +1,7 @@
 import React from "react";
 import moment from "moment";
 import Link from "next/link";
-import Center from "./Center";
+import Center from "../../../components/util/Center";
 
 type CardProps = {
   albumName: string;

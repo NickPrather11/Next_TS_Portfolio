@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Footer from "./components/Footer";
+import Footer from "./components/layout/Footer";
 import dbConnect from "./db/dbConnect";
 import compareAndUpdateAlbums from "@/app/db/controllers/compareAndUpdateAlbums";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/layout/navbar/Navbar";
 import { Suspense } from "react";
 import Loading from "./loading";
 

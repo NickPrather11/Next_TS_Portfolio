@@ -1,5 +1,5 @@
 import React from "react";
-import Center from "./Center";
+import Center from "../../../components/util/Center";
 
 type PaintingProps = {
   fileName: string;

@@ -1,7 +1,7 @@
 import React from "react";
-import Center from "../components/Center";
+import Center from "../components/util/Center";
 import Link from "next/link";
-import Card from "../components/Card";
+import Card from "../components/util/Card";
 
 const projectsPage = async () => {
   return (

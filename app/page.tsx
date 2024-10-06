@@ -1,7 +1,7 @@
-import Card from "./components/Card";
-import Center from "./components/Center";
-import LandingCard from "./components/LandingCard";
-import Page from "./components/Page";
+import Card from "./components/util/Card";
+import Center from "./components/util/Center";
+import LandingCard from "./components/util/LandingCard";
+import Page from "./components/util/Page";
 
 export default function Home() {
   return (

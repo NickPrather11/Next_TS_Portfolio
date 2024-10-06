@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import Center from "../components/Center";
-import Card from "../components/Card";
+import Center from "../components/util/Center";
+import Card from "../components/util/Card";
 
 const aboutPage = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
-import AlbumCard from "@/app/components/AlbumCard";
-import Card from "@/app/components/Card";
+import AlbumCard from "@/app/projects/music/components/AlbumCard";
+import Card from "@/app/components/util/Card";
 
 interface IAlbum {
   albumName: string;

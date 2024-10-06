@@ -1,6 +1,6 @@
-import Card from "@/app/components/Card";
-import Center from "@/app/components/Center";
-import TechCard from "@/app/components/TechCard";
+import Card from "@/app/components/util/Card";
+import Center from "@/app/components/util/Center";
+import TechCard from "@/app/about/site/components/TechCard";
 import dbSeed from "@/app/db/seeds/dbLogoSeed";
 import Link from "next/link";
 import React from "react";
@@ -12,7 +12,7 @@ interface ILogo {
 }
 
 const aboutSite = () => {
-  const item: Array<ILogo> = dbSeed;
+  const item: ILogo[] = dbSeed;
   return (
     <Center className="flex-col">
       <Card className="md:w-9/12">

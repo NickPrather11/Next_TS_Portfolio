@@ -1,9 +1,9 @@
 "use client";
 import React, { createContext, ReactNode, useState } from "react";
 import Link from "next/link";
-import Center from "./Center";
-import { BsChevronDown } from "react-icons/bs";
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import NavbarDesktopDropdown from "./NavbarDesktopDropdown";
+import Center from "../../util/Center";
 
 interface NavDropdownLink {
   path: string;
@@ -48,7 +48,7 @@ const NavbarDesktopLink = ({
         {dropdownBool ? (
           <Center>
             <button onClick={() => setExpanded((curr) => !curr)}>
-              <BsChevronDown />
+              {expanded ? <BsChevronUp /> : <BsChevronDown />}
             </button>
           </Center>
         ) : (

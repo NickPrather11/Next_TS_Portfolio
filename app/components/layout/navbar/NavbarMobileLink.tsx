@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
 import React, { createContext, ReactNode, useState } from "react";
-import Center from "./Center";
-import { BsChevronDown } from "react-icons/bs";
+import Center from "../../util/Center";
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import NavbarMobileChildDropdown from "./NavbarMobileChildDropdown";
+import DropdownArrow from "../../util/DropdownArrow";
 
 interface ChildDropdownLink {
   name: string;
@@ -31,14 +32,17 @@ const NavbarMobileLink = ({
 }: NavbarMobileLinkProps) => {
   const [childExpanded, setChildExpanded] =
     useState<ChildExpandedContextType>(false);
+
   const handleAllExpandedStateUpdates = (newStateValue: boolean) => {
     setChildExpanded(newStateValue);
     onParentExpandedStateUpdate(newStateValue);
   };
+
   let path: string = "../";
   if (name !== "Home") {
     path += name.toLowerCase();
   }
+
   return (
     <div>
       <div className="flex flex-row">
@@ -53,9 +57,10 @@ const NavbarMobileLink = ({
           </Center>
         </Link>
         {childDropdownBool ? (
-          <Center className="mx-4">
+          /*<DropdownArrow expanded={childExpanded} toggleExpanded={{toggleChildExpanded}}/>*/
+          <Center className="flex mx-4">
             <button onClick={() => setChildExpanded((curr) => !curr)}>
-              <BsChevronDown />
+              {childExpanded ? <BsChevronUp /> : <BsChevronDown />}
             </button>
           </Center>
         ) : null}

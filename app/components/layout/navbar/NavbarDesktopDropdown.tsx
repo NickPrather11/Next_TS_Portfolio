@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import Center from "./Center";
+import Center from "../../util/Center";
 
 interface NavDropdownLink {
   path: string;

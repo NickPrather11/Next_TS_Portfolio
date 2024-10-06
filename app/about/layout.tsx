@@ -1,7 +1,7 @@
 "use client";
 import React, { Suspense, useState } from "react";
 import Loading from "../components/LoadingComponent";
-import Page from "../components/Page";
+import Page from "../components/util/Page";
 import Link from "next/link";
 
 export default function ProjectsLayout({
