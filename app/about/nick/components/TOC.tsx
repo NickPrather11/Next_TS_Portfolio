@@ -12,6 +12,8 @@ type ExpandedContextType = boolean;
 
 const DropdownContext = createContext<ExpandedContextType>(false);
 
+{
+  /* 
 interface ITOCSubLink {
   sectionPath: string;
   text: string;
@@ -99,8 +101,10 @@ export const TOCLinks = (expandedState: boolean) => {
     </ul>
   );
 };
+*/
+}
 
-const TOC = (TOCLinks: TOCProps) => {
+const TOC = () => {
   const [expandedTOC, setExpandedTOC] = useState<ExpandedContextType>(false);
 
   return (
