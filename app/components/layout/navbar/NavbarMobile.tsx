@@ -36,7 +36,7 @@ const NavbarMobile = ({ className }: any) => {
         <div
           className={`${
             expanded
-              ? "flex flex-col absolute right-0 mr-2 mt-16 rounded-xl border border-slate-200 bg-slate-900"
+              ? "flex flex-col absolute z-50 right-0 mr-2 mt-16 rounded-xl border border-slate-200 bg-slate-900"
               : "hidden"
           }`}
         >

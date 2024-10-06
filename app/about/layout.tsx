@@ -20,7 +20,7 @@ export default function ProjectsLayout({
 
       <hr className="mt-6 w-11/12 md:w-7/12" />
 
-      <div className="flex flex-row justify-evenly w-full pt-2 md:justify-center md:gap-10 md:w-7/12">
+      <div className="flex flex-row flex-wrap justify-evenly w-full pt-2 md:justify-center md:gap-10 md:w-7/12">
         <Link
           onClick={() => setActiveLink(1)}
           href="/about/site"
