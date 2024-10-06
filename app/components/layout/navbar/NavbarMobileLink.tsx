@@ -60,7 +60,7 @@ const NavbarMobileLink = ({
         </Link>
         {childDropdownBool ? (
           /*<DropdownArrow expanded={childExpanded} toggleExpanded={{toggleChildExpanded}}/>*/
-          <Center className="flex mx-4">
+          <Center className="flex ml-12 mr-2">
             <button onClick={() => setChildExpanded((curr) => !curr)}>
               {childExpanded ? <BsChevronUp /> : <BsChevronDown />}
             </button>
