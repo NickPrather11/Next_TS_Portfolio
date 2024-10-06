@@ -24,7 +24,7 @@ const NavbarMobile = ({ className }: any) => {
 
   return (
     <div className={`flex flex-grow justify-end ${className}`}>
-      <div className="flex items-center mr-4 text-3xl">
+      <div className="flex items-center mr-4 text-4xl">
         <button
           onClick={() => setExpanded((curr) => !curr)}
           className={`p-2 rounded-full ${expanded ? "bg-slate-500" : ""}`}
