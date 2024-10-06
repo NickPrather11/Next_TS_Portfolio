@@ -1,20 +1,22 @@
 import React, { createContext, ReactNode, useState } from "react";
 
-interface layoutContextType {
+{
+  /* 
+interface LayoutContextType {
   activeTabState: number;
   handleAboutLayoutState: () => void;
 }
 
-const tabsDefaultValue: layoutContextType = {
+const tabsDefaultValue: LayoutContextType = {
   activeTabState: 0,
   handleAboutLayoutState: () => {},
 };
 
 const aboutPageLayoutContext =
-  createContext<layoutContextType>(tabsDefaultValue);
+  createContext<LayoutContextType>(tabsDefaultValue);
 
 const aboutPageLayoutProvider = ({ children }: { children: ReactNode }) => {
-  const [activeTabState, setActiveTabState] = useState<layoutContextType>(
+  const [activeTabState, setActiveTabState] = useState<LayoutContextType>(
     tabsDefaultValue.activeTabState
   );
   const handleAboutLayoutState = (newValue: number) => {
@@ -30,3 +32,5 @@ const aboutPageLayoutProvider = ({ children }: { children: ReactNode }) => {
 };
 
 export default aboutPageLayoutProvider;
+*/
+}
