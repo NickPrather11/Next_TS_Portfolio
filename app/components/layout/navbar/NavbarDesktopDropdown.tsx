@@ -1,11 +1,7 @@
+import React, { ReactNode } from "react";
 import Link from "next/link";
-import React from "react";
 import Center from "../../util/Center";
-
-interface NavDropdownLink {
-  path: string;
-  text: string;
-}
+import { NavDropdownLink } from "./NavbarDesktopLink";
 
 interface DropdownLinkProps {
   dropdownContents: NavDropdownLink[];
@@ -24,9 +20,10 @@ const NavbarDesktopDropdown = ({
           href={dropLink.path}
           onClick={() => onUpdateNavDeskLinkState(false)}
         >
-          <Center className="navlink text-sm">
+          <div className="flex flex-row justify-start navlink text-sm gap-4">
+            <Center>{dropLink.icon}</Center>
             <p>{dropLink.text}</p>
-          </Center>
+          </div>
         </Link>
       ))}
     </div>

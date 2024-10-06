@@ -6,9 +6,10 @@ import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import NavbarMobileChildDropdown from "./NavbarMobileChildDropdown";
 import DropdownArrow from "../../util/DropdownArrow";
 
-interface ChildDropdownLink {
+export interface ChildDropdownLink {
   name: string;
   path: string;
+  icon: ReactNode;
 }
 
 interface NavbarMobileLinkProps {
@@ -51,7 +52,7 @@ const NavbarMobileLink = ({
           className="flex flex-row navlink gap-2"
           onClick={() => onParentExpandedStateUpdate(false)}
         >
-          <Center className="gap-2">
+          <Center className="gap-4">
             {icon}
             {name}
           </Center>

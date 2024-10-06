@@ -5,9 +5,10 @@ import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import NavbarDesktopDropdown from "./NavbarDesktopDropdown";
 import Center from "../../util/Center";
 
-interface NavDropdownLink {
+export interface NavDropdownLink {
   path: string;
   text: string;
+  icon: ReactNode;
 }
 
 interface NavLinkProps {

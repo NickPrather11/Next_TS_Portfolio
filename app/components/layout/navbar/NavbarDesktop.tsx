@@ -1,10 +1,16 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import NavbarDesktopLink from "./NavbarDesktopLink";
-import { BsCassette, BsFillHouseFill, BsInfoCircle } from "react-icons/bs";
+import {
+  BsCassette,
+  BsFillHouseFill,
+  BsInfoCircle,
+  BsPalette,
+  BsPersonRaisedHand,
+  BsTools,
+  BsWindow,
+} from "react-icons/bs";
 
 const NavbarDesktop = ({ className }: any) => {
-  const [activeLink, setActiveLink] = useState(0);
   return (
     <div className={`hidden items-center gap-4 ${className}`}>
       <NavbarDesktopLink
@@ -18,18 +24,9 @@ const NavbarDesktop = ({ className }: any) => {
       <NavbarDesktopLink
         path="../projects"
         name="Projects"
-        icon={<BsCassette />}
-        dropdownBool={true}
-        dropdownContents={[
-          {
-            path: "../projects/music",
-            text: "Music",
-          },
-          {
-            path: "../projects/paintings",
-            text: "Paintings",
-          },
-        ]}
+        icon={<BsTools />}
+        dropdownBool={false}
+        dropdownContents={[]}
       />
 
       <NavbarDesktopLink
@@ -41,10 +38,22 @@ const NavbarDesktop = ({ className }: any) => {
           {
             path: "../about/site",
             text: "About This Site",
+            icon: <BsWindow />,
           },
           {
             path: "../about/nick",
             text: "About Nick",
+            icon: <BsPersonRaisedHand />,
+          },
+          {
+            path: "../about/music",
+            text: "Music",
+            icon: <BsCassette />,
+          },
+          {
+            path: "../about/paintings",
+            text: "Paintings",
+            icon: <BsPalette />,
           },
         ]}
       />

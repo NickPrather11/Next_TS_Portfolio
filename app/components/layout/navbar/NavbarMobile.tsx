@@ -5,6 +5,10 @@ import {
   BsFillHouseFill,
   BsInfoCircle,
   BsList,
+  BsPalette,
+  BsPersonRaisedHand,
+  BsTools,
+  BsWindow,
 } from "react-icons/bs";
 import NavbarMobileLink from "./NavbarMobileLink";
 
@@ -46,18 +50,9 @@ const NavbarMobile = ({ className }: any) => {
           <hr className="w-full" />
           <NavbarMobileLink
             name="Projects"
-            icon={<BsCassette />}
-            childDropdownBool={true}
-            childDropdownContents={[
-              {
-                name: "Music",
-                path: "../projects/music",
-              },
-              {
-                name: "Paintings",
-                path: "../projects/paintings",
-              },
-            ]}
+            icon={<BsTools />}
+            childDropdownBool={false}
+            childDropdownContents={[]}
             onParentExpandedStateUpdate={handleParentExpandedStateUpdate}
           />
           <hr className="w-full" />
@@ -69,10 +64,22 @@ const NavbarMobile = ({ className }: any) => {
               {
                 name: "About This Site",
                 path: "../about/site",
+                icon: <BsWindow />,
               },
               {
                 name: "About Nick",
                 path: "../about/nick",
+                icon: <BsPersonRaisedHand />,
+              },
+              {
+                name: "Music",
+                path: "../about/music",
+                icon: <BsCassette />,
+              },
+              {
+                name: "Paintings",
+                path: "../about/paintings",
+                icon: <BsPalette />,
               },
             ]}
             onParentExpandedStateUpdate={handleParentExpandedStateUpdate}

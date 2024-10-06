@@ -34,7 +34,7 @@ export default function Home() {
           <LandingCard
             url="https://github.com/NickPrather11/Next_TS_Portfolio"
             title="Site Repo"
-            description="See the code repository for this site"
+            description="See the code repository for this site."
             external={true}
           />
 
@@ -50,13 +50,13 @@ export default function Home() {
           <LandingCard
             url="./projects"
             title="Projects"
-            description="Check out my past development projects, audio recordings, and more..."
+            description="This Section Coming Soon!"
             external={false}
           />
           <LandingCard
             url="./about"
             title="About"
-            description="Learn more about this site and my work experience..."
+            description="Learn more about this site, my work experience, music, and art."
             external={false}
           />
 

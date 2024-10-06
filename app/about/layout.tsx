@@ -39,6 +39,24 @@ export default function ProjectsLayout({
         >
           About Nick
         </Link>
+        <Link
+          onClick={() => setActiveLink(3)}
+          href="/about/music"
+          className={`tab-link ${
+            activeLink === 3 ? "bg-slate-500 bg-opacity-50" : ""
+          }`}
+        >
+          Music
+        </Link>
+        <Link
+          onClick={() => setActiveLink(4)}
+          href="/about/paintings"
+          className={`tab-link ${
+            activeLink === 4 ? "bg-slate-500 bg-opacity-50" : ""
+          }`}
+        >
+          Paintings
+        </Link>
       </div>
 
       <Page className="lg:w-11/12">
