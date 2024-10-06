@@ -5,6 +5,11 @@ import Loading from "../../projects/loading";
 import Card from "@/app/components/util/Card";
 
 const projectsPage = async () => {
+  {
+    /* 
+      The "paintings" variable initialization below does not follow the standard of importing the TypeScript interface from the component that props are being sent to. In order to follow project standards, investigate how to read the filenames from ./public/paintings/ and store them in an array of IPainting objects.
+    */
+  }
   const paintings: string[] = fs.readdirSync("./public/paintings/");
 
   return (

@@ -2,14 +2,7 @@ import React from "react";
 import moment from "moment";
 import Link from "next/link";
 import Center from "../../../components/util/Center";
-
-type CardProps = {
-  albumName: string;
-  bandcampURL: string;
-  albumImg: string;
-  artistName: string;
-  releaseDate: Date;
-};
+import { IAlbum } from "@/app/db/seeds/dbAlbumsSeed";
 
 const AlbumCard = ({
   albumName,
@@ -17,7 +10,7 @@ const AlbumCard = ({
   albumImg,
   artistName,
   releaseDate,
-}: CardProps) => {
+}: IAlbum) => {
   const releaseDateString = moment(releaseDate).format("l");
   return (
     <Link

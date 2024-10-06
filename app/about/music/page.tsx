@@ -1,14 +1,7 @@
 import React from "react";
 import AlbumCard from "@/app/about/music/components/AlbumCard";
 import Card from "@/app/components/util/Card";
-
-interface IAlbum {
-  albumName: string;
-  albumImg: string;
-  artistName: string;
-  bandcampURL: string;
-  releaseDate: Date;
-}
+import { IAlbum } from "@/app/db/seeds/dbAlbumsSeed";
 
 interface AlbumArray {
   albums: IAlbum[];

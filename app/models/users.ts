@@ -1,12 +1,12 @@
-import mongoose, { Schema } from "mongoose"
+import mongoose, { Schema } from "mongoose";
 
 const userSchema = new Schema(
   {
     userName: String,
-    userPassword: String
-  }, 
-  { 
-    collection: 'users'
+    userPassword: String,
+  },
+  {
+    collection: "users",
   }
 );
 

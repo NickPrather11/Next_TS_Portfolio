@@ -1,15 +1,9 @@
+import React from "react";
 import Card from "@/app/components/util/Card";
 import Center from "@/app/components/util/Center";
-import TechCard from "@/app/about/site/components/TechCard";
-import dbSeed from "@/app/db/seeds/dbLogoSeed";
 import Link from "next/link";
-import React from "react";
-
-interface ILogo {
-  name: string;
-  url: string;
-  imgFile: string;
-}
+import TechCard from "@/app/about/site/components/TechCard";
+import dbSeed, { ILogo } from "@/app/db/seeds/dbLogoSeed";
 
 const aboutSite = () => {
   const item: ILogo[] = dbSeed;

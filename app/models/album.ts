@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose"
+import mongoose, { Schema } from "mongoose";
 
 const albumSchema = new Schema(
   {
@@ -6,10 +6,10 @@ const albumSchema = new Schema(
     albumImg: String,
     artistName: String,
     bandcampURL: String,
-    releaseDate: Date
-  }, 
-  { 
-    collection: 'albums'
+    releaseDate: Date,
+  },
+  {
+    collection: "albums",
   }
 );
 

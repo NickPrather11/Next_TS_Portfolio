@@ -1,11 +1,11 @@
 import React from "react";
 import Center from "../../../components/util/Center";
 
-type PaintingProps = {
+export interface IPainting {
   fileName: string;
-};
+}
 
-const PaintingCard = ({ fileName }: PaintingProps) => {
+const PaintingCard = ({ fileName }: IPainting) => {
   const title: string = fileName
     .substring(fileName.indexOf("_") + 1, fileName.length)
     .replace(/\.[^/.]+$/, "")

@@ -1,15 +1,15 @@
 // THIS FILE WILL REPLACE ./techLogos.ts ONCE THE IMAGES ARE LOADED IN THE DB
 
-import mongoose, { Schema } from "mongoose"
+import mongoose, { Schema } from "mongoose";
 
 const logo = new Schema(
   {
     name: String,
     url: String,
-    imgFile: Image    
-  }, 
-  { 
-    collection: 'logos'
+    imgFile: Image,
+  },
+  {
+    collection: "logos",
   }
 );
 

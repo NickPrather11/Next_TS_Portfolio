@@ -38,7 +38,7 @@ const NavbarDesktopLink = ({
 
   return (
     <div>
-      <Center className="flex-row">
+      <Center>
         <Link href={path} className="mx-4">
           <Center className="gap-2 text-lg text-white hover:text-gray-500/75">
             {icon}
@@ -62,7 +62,7 @@ const NavbarDesktopLink = ({
         <div
           className={`${
             expanded
-              ? "flex flex-col absolute mt-2 px-2 rounded-xl border border-slate-200 bg-slate-900"
+              ? "flex flex-col absolute z-50 mt-2 px-2 rounded-xl border border-slate-200 bg-slate-900"
               : "hidden"
           }`}
         >
