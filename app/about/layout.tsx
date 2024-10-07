@@ -25,7 +25,7 @@ export default function ProjectsLayout({
           onClick={() => setActiveLink(1)}
           href="/about/site"
           className={`tab-link ${
-            activeLink === 1 ? "bg-slate-500 bg-opacity-50" : ""
+            activeLink === 1 ? "bg-slate-800 bg-opacity-70" : ""
           }`}
         >
           About This Site
@@ -34,7 +34,7 @@ export default function ProjectsLayout({
           onClick={() => setActiveLink(2)}
           href="/about/nick"
           className={`tab-link ${
-            activeLink === 2 ? "bg-slate-500 bg-opacity-50" : ""
+            activeLink === 2 ? "bg-slate-800 bg-opacity-70" : ""
           }`}
         >
           About Nick
@@ -43,7 +43,7 @@ export default function ProjectsLayout({
           onClick={() => setActiveLink(3)}
           href="/about/music"
           className={`tab-link ${
-            activeLink === 3 ? "bg-slate-500 bg-opacity-50" : ""
+            activeLink === 3 ? "bg-slate-800 bg-opacity-70" : ""
           }`}
         >
           Music
@@ -52,7 +52,7 @@ export default function ProjectsLayout({
           onClick={() => setActiveLink(4)}
           href="/about/paintings"
           className={`tab-link ${
-            activeLink === 4 ? "bg-slate-500 bg-opacity-50" : ""
+            activeLink === 4 ? "bg-slate-800 bg-opacity-70" : ""
           }`}
         >
           Paintings

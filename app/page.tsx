@@ -1,6 +1,6 @@
 import Card from "./components/util/Card";
+import CardLink from "./components/util/CardLink";
 import Center from "./components/util/Center";
-import LandingCard from "./components/util/LandingCard";
 import Page from "./components/util/Page";
 
 export default function Home() {
@@ -31,41 +31,46 @@ export default function Home() {
 
       <Center id="all_landing_cards" className="flex flex-col w-full m-8">
         <Center className="flex-col justify-evenly lg:flex-row">
-          <LandingCard
-            url="https://github.com/NickPrather11/Next_TS_Portfolio"
+          <CardLink
+            href="https://github.com/NickPrather11/Next_TS_Portfolio"
+            target="_blank"
             title="Site Repo"
             description="See the code repository for this site."
-            external={true}
+            className=""
           />
 
-          <LandingCard
-            url="https://github.com/users/NickPrather11/projects/1"
+          <CardLink
+            href="https://github.com/users/NickPrather11/projects/1"
+            target="_blank"
             title="Planned Updates"
             description="GitHub project for tracking updates, bug fixes, etc."
-            external={true}
+            className=""
           />
         </Center>
 
         <Center className="flex-col justify-evenly lg:flex-row">
-          <LandingCard
-            url="./projects"
+          <CardLink
+            href="./projects"
+            target="_self"
             title="Projects"
             description="This Section Coming Soon!"
-            external={false}
+            className=""
           />
-          <LandingCard
-            url="./about"
+          <CardLink
+            href="./about"
+            target="_self"
             title="About"
             description="Learn more about this site, my work experience, music, and art."
-            external={false}
+            className=""
           />
 
           {/*
-          <LandingCard
-            url="./contact"
+          <CardLink
+            href="./contact"
+            target="_self"
             title="Contact"
             description="Curious about my work? Interested in collaborating? Send me a message!"
-            external={false}
+            className=""
           />
           */}
         </Center>

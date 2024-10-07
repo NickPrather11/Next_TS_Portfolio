@@ -1,35 +1,41 @@
 import React from "react";
-import Link from "next/link";
 import Center from "../components/util/Center";
-import Card from "../components/util/Card";
+import CardLink from "../components/util/CardLink";
 
 const aboutPage = () => {
   return (
     <Center className="flex-col md:flex-row md:flex-wrap">
-      <Card>
-        <Link href="/about/site" className="flex flex-col items-center">
-          <h3 className="text-nowrap">About This Site</h3>
-          <p>Learn more about how this site was created</p>
-        </Link>
-      </Card>
-      <Card>
-        <Link href="/about/nick" className="flex flex-col items-center">
-          <h3 className="text-nowrap">About Nick</h3>
-          <p>Learn more about Nick Prather</p>
-        </Link>
-      </Card>
-      <Card>
-        <Link href="/about/music" className="flex flex-col items-center">
-          <h3>Music</h3>
-          <p>Check out my recording projects</p>
-        </Link>
-      </Card>
-      <Card>
-        <Link href="/about/paintings" className="flex flex-col items-center">
-          <h3>Paintings</h3>
-          <p>Browse examples of my acrylic paintings</p>
-        </Link>
-      </Card>
+      <CardLink
+        href="/about/site"
+        target="_self"
+        title="About This Site"
+        description="Learn more about how this site was created"
+        className=""
+      />
+
+      <CardLink
+        href="/about/nick"
+        target="_self"
+        title="About Nick"
+        description="Learn more about Nick Prather"
+        className=""
+      />
+
+      <CardLink
+        href="/about/music"
+        target="_self"
+        title="Music"
+        description="Check out my recording projects"
+        className=""
+      />
+
+      <CardLink
+        href="/about/paintings"
+        target="_self"
+        title="Paintings"
+        description="Browse examples of my acrylic paintings"
+        className=""
+      />
     </Center>
   );
 };
