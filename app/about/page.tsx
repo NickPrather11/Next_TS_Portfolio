@@ -11,6 +11,7 @@ const aboutPage = () => {
         title="About This Site"
         description="Learn more about how this site was created"
         className=""
+        childImgPath={null}
       />
 
       <CardLink
@@ -19,6 +20,7 @@ const aboutPage = () => {
         title="About Nick"
         description="Learn more about Nick Prather"
         className=""
+        childImgPath={null}
       />
 
       <CardLink
@@ -27,6 +29,7 @@ const aboutPage = () => {
         title="Music"
         description="Check out my recording projects"
         className=""
+        childImgPath={null}
       />
 
       <CardLink
@@ -35,6 +38,7 @@ const aboutPage = () => {
         title="Paintings"
         description="Browse examples of my acrylic paintings"
         className=""
+        childImgPath={null}
       />
     </Center>
   );

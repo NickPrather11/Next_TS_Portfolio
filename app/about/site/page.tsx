@@ -3,10 +3,10 @@ import Card from "@/app/components/util/Card";
 import Center from "@/app/components/util/Center";
 import Link from "next/link";
 import TechCard from "@/app/about/site/components/TechCard";
-import dbSeed, { ILogo } from "@/app/db/seeds/dbLogoSeed";
+import dbLogoSeed, { ILogo } from "@/app/db/seeds/dbLogoSeed";
 
 const aboutSite = () => {
-  const item: ILogo[] = dbSeed;
+  const item: ILogo[] = dbLogoSeed;
   return (
     <Center className="flex-col">
       <Card className="md:w-9/12">

@@ -6,7 +6,7 @@ export interface IAlbum {
   releaseDate: Date;
 }
 
-const dbAlbumsSeed: Array<IAlbum> = [
+const dbAlbumsSeed: IAlbum[] = [
   {
     albumName: "Subliminal Entity",
     artistName: "Liminal Deities",

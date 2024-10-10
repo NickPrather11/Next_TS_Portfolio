@@ -9,6 +9,7 @@ export interface ICardLink {
   className: string;
   title: string;
   description: string;
+  childImgPath: string | null;
 }
 
 const CardLink = ({
@@ -17,6 +18,7 @@ const CardLink = ({
   className,
   title,
   description,
+  childImgPath,
 }: ICardLink) => {
   const [clicked, setClicked] = useState(false);
 
@@ -43,6 +45,11 @@ const CardLink = ({
     >
       <button onClick={(e) => handleOnClick(e)}>
         <Center className="flex flex-col">
+          {childImgPath !== null ? (
+            <div className="flex flex-0">
+              <img src={childImgPath} alt="" className="m-2 mb-4" />
+            </div>
+          ) : null}
           <h3 className="text-center text-nowrap">{title}</h3>
           <p className="text-center text-sm text-wrap">{description}</p>
         </Center>

@@ -20,8 +20,8 @@ const projectsPage = async () => {
       </div>
 
       <ul className="flex flex-wrap justify-center mt-10">
-        {paintings.map((painting: string) => (
-          <li key={painting}>
+        {paintings.map((painting: string, index: number) => (
+          <li key={index}>
             <Suspense fallback={<Loading />}>
               <PaintingCard fileName={painting} />
             </Suspense>

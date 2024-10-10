@@ -10,7 +10,7 @@ export default function Home() {
         <Center className="flex-col mx-8 gap-4 lg:max-w-6xl">
           <p className="text-3xl font-bold">Hi, I&apos;m Nick!</p>
 
-          <img src="/AvatarNick.svg" alt="" className="h-80 rounded-xl" />
+          <img src="/AvatarNick.svg" alt="" className="h-40 rounded-xl" />
 
           <p className="text-lg text-center">
             Full Stack Web Application Developer with a background in
@@ -35,16 +35,18 @@ export default function Home() {
             href="https://github.com/NickPrather11/Next_TS_Portfolio"
             target="_blank"
             title="Site Repo"
-            description="See the code repository for this site."
+            description="See the code repository for this site"
             className=""
+            childImgPath={null}
           />
 
           <CardLink
             href="https://github.com/users/NickPrather11/projects/1"
             target="_blank"
             title="Planned Updates"
-            description="GitHub project for tracking updates, bug fixes, etc."
+            description="GitHub project for tracking updates and bug fixes"
             className=""
+            childImgPath={null}
           />
         </Center>
 
@@ -53,15 +55,17 @@ export default function Home() {
             href="./projects"
             target="_self"
             title="Projects"
-            description="This Section Coming Soon!"
+            description="Check out my past development projects"
             className=""
+            childImgPath={null}
           />
           <CardLink
             href="./about"
             target="_self"
             title="About"
-            description="Learn more about this site, my work experience, music, and art."
+            description="Learn more about this site, my work experience, music, and art"
             className=""
+            childImgPath={null}
           />
 
           {/*
@@ -71,6 +75,7 @@ export default function Home() {
             title="Contact"
             description="Curious about my work? Interested in collaborating? Send me a message!"
             className=""
+            childImgPath={null}
           />
           */}
         </Center>
