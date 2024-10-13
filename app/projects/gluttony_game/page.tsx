@@ -17,7 +17,7 @@ const gluttonyGamePage = () => {
   };
 
   return (
-    <Center className="flex flex-col mt-4">
+    <Center className="flex flex-col mt-4 w-11/12">
       <img src={project.imgPath} alt="" className="lg:w-1/2" />
       <Card className="flex flex-col gap-4 lg:w-1/2">
         <h3>{project.title}</h3>
