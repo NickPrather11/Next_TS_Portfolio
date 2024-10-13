@@ -12,8 +12,8 @@ const dbProjectsSeed: IProject[] = [
   {
     slug: "lebowski_trivia",
     imgPath: "/projectImages/Lebowski_Trivia.PNG",
-    hrefDeployed: "https://nickprather11.github.io/TriviaGame/",
-    hrefRepo: "https://github.com/NickPrather11/TriviaGame",
+    hrefDeployed: "https://nickprather11.github.io/Lebowski_Trivia/",
+    hrefRepo: "https://github.com/NickPrather11/Lebowski_Trivia",
     title: "Lebowski Trivia",
     descriptionShort: "Trivia game based on the movie 'The Big Lebowski'",
     descriptionExtended:
