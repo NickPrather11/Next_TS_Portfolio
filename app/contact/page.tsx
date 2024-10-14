@@ -1,6 +1,6 @@
 import React from "react";
-import Page from "../components/util/Page";
-import Card from "../components/util/Card";
+import Page from "../components/Page";
+import Card from "../components/Card";
 
 const contactPage = () => {
   return (
