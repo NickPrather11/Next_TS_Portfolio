@@ -22,8 +22,8 @@ const dbProjectsSeed: IProject[] = [
   {
     slug: "gluttony_game",
     imgPath: "/projectImages/Gluttony_Game.PNG",
-    hrefDeployed: "https://nickprather11.github.io/unit-4-game/",
-    hrefRepo: "https://github.com/NickPrather11/unit-4-game",
+    hrefDeployed: "https://nickprather11.github.io/gluttony_game/",
+    hrefRepo: "https://github.com/NickPrather11/gluttony_game",
     title: "Gluttony! Game",
     descriptionShort: "Memory game with a hedonistic theme. Indulge yourself!",
     descriptionExtended:
