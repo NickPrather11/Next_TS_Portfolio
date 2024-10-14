@@ -1,6 +1,6 @@
 import React from "react";
 import AlbumCard from "@/app/about/music/components/AlbumCard";
-import Card from "@/app/components/util/Card";
+import Card from "@/app/components/Card";
 import { IAlbum } from "@/app/db/seeds/dbAlbumsSeed";
 
 interface AlbumArray {

@@ -3,7 +3,7 @@ import React, { createContext, ReactNode, useState } from "react";
 import Link from "next/link";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import NavbarDesktopDropdown from "./NavbarDesktopDropdown";
-import Center from "../../util/Center";
+import Center from "../Center";
 
 export interface NavDropdownLink {
   path: string;

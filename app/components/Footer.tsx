@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Center from "../util/Center";
+import Center from "./Center";
 import {
   FaGithub,
   FaLinkedin,

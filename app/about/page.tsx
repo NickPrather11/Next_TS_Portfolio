@@ -1,6 +1,6 @@
 import React from "react";
-import Center from "../components/util/Center";
-import CardLink from "../components/util/CardLink";
+import Center from "../components/Center";
+import CardLink from "../components/CardLink";
 
 const aboutPage = () => {
   return (

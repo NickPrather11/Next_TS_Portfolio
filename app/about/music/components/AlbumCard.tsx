@@ -1,7 +1,7 @@
 import React from "react";
 import moment from "moment";
 import Link from "next/link";
-import Center from "../../../components/util/Center";
+import Center from "../../../components/Center";
 import { IAlbum } from "@/app/db/seeds/dbAlbumsSeed";
 
 const AlbumCard = ({

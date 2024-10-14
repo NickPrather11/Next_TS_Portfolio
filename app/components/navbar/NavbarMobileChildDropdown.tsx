@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { ChildDropdownLink } from "./NavbarMobileLink";
-import Center from "../../util/Center";
+import Center from "../Center";
 
 interface ChildDropdownProps {
   dropdownContents: ChildDropdownLink[];

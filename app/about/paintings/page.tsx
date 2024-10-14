@@ -2,7 +2,7 @@ import React, { Suspense } from "react";
 import fs from "fs";
 import PaintingCard from "@/app/about/paintings/components/PaintingCard";
 import Loading from "../../projects/loading";
-import Card from "@/app/components/util/Card";
+import Card from "@/app/components/Card";
 
 const projectsPage = async () => {
   {

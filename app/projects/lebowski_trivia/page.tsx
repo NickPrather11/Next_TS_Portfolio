@@ -1,8 +1,8 @@
 import React from "react";
 import { IProject } from "@/app/db/seeds/dbProjectsSeed";
 import Link from "next/link";
-import Card from "@/app/components/util/Card";
-import Center from "@/app/components/util/Center";
+import Card from "@/app/components/Card";
+import Center from "@/app/components/Center";
 
 const lebowskiTriviaPage = () => {
   const project: IProject = {

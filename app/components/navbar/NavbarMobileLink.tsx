@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
 import React, { createContext, ReactNode, useState } from "react";
-import Center from "../../util/Center";
+import Center from "../Center";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import NavbarMobileChildDropdown from "./NavbarMobileChildDropdown";
-import DropdownArrow from "../../util/DropdownArrow";
+import DropdownArrow from "../DropdownArrow";
 
 export interface ChildDropdownLink {
   name: string;

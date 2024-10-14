@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import Link from "next/link";
-import Center from "../../util/Center";
+import Center from "../Center";
 import { NavDropdownLink } from "./NavbarDesktopLink";
 
 interface DropdownLinkProps {

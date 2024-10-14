@@ -1,9 +1,9 @@
 import React from "react";
-import Center from "../components/util/Center";
+import Center from "../components/Center";
 import dbProjectsSeed, { IProject } from "../db/seeds/dbProjectsSeed";
-import CardLink from "../components/util/CardLink";
+import CardLink from "../components/CardLink";
 import Page from "../page";
-import Card from "../components/util/Card";
+import Card from "../components/Card";
 
 const projectsPage = () => {
   const projects: IProject[] = dbProjectsSeed;
@@ -25,7 +25,7 @@ const projectsPage = () => {
       ))}
       <li>
         <Card>
-          <h3>More Projects Coming Soon!</h3>
+          <h3>More Projects Coming Soon</h3>
         </Card>
       </li>
     </ul>

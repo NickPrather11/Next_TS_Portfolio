@@ -1,6 +1,6 @@
 import React from "react";
-import Card from "@/app/components/util/Card";
-import Center from "@/app/components/util/Center";
+import Card from "@/app/components/Card";
+import Center from "@/app/components/Center";
 import Link from "next/link";
 import TechCard from "@/app/about/site/components/TechCard";
 import dbLogoSeed, { ILogo } from "@/app/db/seeds/dbLogoSeed";

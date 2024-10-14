@@ -1,5 +1,5 @@
 import React from "react";
-import Center from "../../../components/util/Center";
+import Center from "../../../components/Center";
 
 export interface IPainting {
   fileName: string;

@@ -1,7 +1,7 @@
-import Card from "./components/util/Card";
-import CardLink from "./components/util/CardLink";
-import Center from "./components/util/Center";
-import Page from "./components/util/Page";
+import Card from "./components/Card";
+import CardLink from "./components/CardLink";
+import Center from "./components/Center";
+import Page from "./components/Page";
 
 export default function Home() {
   return (

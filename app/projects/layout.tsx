@@ -1,8 +1,8 @@
 import React, { Suspense } from "react";
 import Loading from "../components/LoadingComponent";
-import Page from "../components/util/Page";
+import Page from "../components/Page";
 import Link from "next/link";
-import Card from "../components/util/Card";
+import Card from "../components/Card";
 
 export default function ProjectsLayout({
   children,
