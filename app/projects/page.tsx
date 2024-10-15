@@ -23,9 +23,9 @@ const projectsPage = () => {
           </Center>
         </li>
       ))}
-      <li>
+      <li className="mt-8">
         <Card>
-          <h3 className="text-nowrap m-0">More Projects Coming Soon</h3>
+          <h4 className="text-nowrap m-0">More Projects Coming Soon</h4>
         </Card>
       </li>
     </ul>
