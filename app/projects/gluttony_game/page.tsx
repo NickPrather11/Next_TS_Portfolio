@@ -18,34 +18,29 @@ const gluttonyGamePage = () => {
 
   return (
     <Center className="flex flex-col mt-4 w-11/12">
-      <img src={project.imgPath} alt="" className="lg:w-1/2" />
-      <Card className="flex flex-col gap-4 lg:w-1/2">
-        <h3>{project.title}</h3>
-        <div>
-          <div className="flex flex-row flex-wrap">
-            <h5 className="mr-4">Deployed Link:</h5>
-            <Link
-              href={project.hrefDeployed}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link"
-            >
-              <h5>{project.hrefDeployed}</h5>
-            </Link>
-          </div>
-          <div className="flex flex-row flex-wrap">
-            <h5 className="mr-4">Project Repo:</h5>
-            <Link
-              href={project.hrefRepo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="link"
-            >
-              <h5>{project.hrefRepo}</h5>
-            </Link>
-          </div>
-        </div>
-        <p className="">{project.descriptionExtended}</p>
+      <img src={project.imgPath} alt="" className="w-10/12 lg:w-1/2" />
+      <Card className="lg:w-1/2">
+        <Link
+          href={project.hrefDeployed}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex"
+        >
+          <h2 className="flex-grow-0 mb-4 py-2 px-4 bg-slate-500 rounded-full border-2 border-slate-800 hover:text-slate-300 hover:bg-slate-700">
+            {project.title}
+          </h2>
+        </Link>
+        <Link
+          href={project.hrefRepo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex"
+        >
+          <h3 className="flex-grow-0 mb-10 py-2 px-4 bg-slate-500 rounded-full border-2 border-slate-800 hover:text-slate-300 hover:bg-slate-700">
+            GitHub Repo
+          </h3>
+        </Link>
+        <p>{project.descriptionExtended}</p>
       </Card>
     </Center>
   );

@@ -13,7 +13,9 @@ export default function ProjectsLayout({
     <Page>
       <div className="flex justify-center w-full bg-slate-700 bg-opacity-90">
         <h1 className="py-6">
-          <Link href="/projects">PROJECTS</Link>
+          <Link href="/projects" className="hover:text-slate-300">
+            PROJECTS
+          </Link>
         </h1>
       </div>
 
