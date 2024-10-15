@@ -20,13 +20,13 @@ const aboutSite = () => {
           using Mongoose.
           <br></br>
           <br></br>
-          <p className="text-center">
+          <p>
             If you&apos;d like to check out the code repo for this site and see
             the updates I have planned, see the links below.
           </p>
         </p>
 
-        <div className="flex justify-evenly mt-8">
+        <div className="flex flex-col justify-evenly mt-8 gap-8 md:flex-row">
           <Link
             href="https://github.com/NickPrather11/Next_TS_Portfolio"
             className="link text-center text-xl"
