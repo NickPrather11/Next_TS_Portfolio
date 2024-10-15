@@ -25,7 +25,7 @@ const projectsPage = () => {
       ))}
       <li>
         <Card>
-          <h3>More Projects Coming Soon</h3>
+          <h3 className="text-nowrap m-0">More Projects Coming Soon</h3>
         </Card>
       </li>
     </ul>

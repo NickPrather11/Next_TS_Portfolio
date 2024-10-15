@@ -26,7 +26,7 @@ const lebowskiTriviaPage = () => {
           rel="noopener noreferrer"
           className="flex"
         >
-          <h2 className="flex-grow-0 mb-4 py-2 px-4 bg-slate-500 rounded-full border-2 border-slate-800 hover:text-slate-300 hover:bg-slate-700">
+          <h2 className="flex-grow-0 mb-4 py-2 px-4 text-nowrap bg-slate-500 rounded-full border-2 border-slate-800 hover:text-slate-300 hover:bg-slate-700">
             {project.title}
           </h2>
         </Link>

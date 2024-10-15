@@ -5,12 +5,10 @@ import Page from "./components/Page";
 
 export default function Home() {
   return (
-    <Page>
+    <Page className="pt-4">
       <Card>
-        <Center className="flex-col mx-8 gap-4 lg:max-w-6xl">
-          <p className="text-3xl font-bold">Hi, I&apos;m Nick!</p>
-
-          <img src="/AvatarNick.svg" alt="" className="h-40 rounded-xl" />
+        <Center className="flex-col mx-8 lg:max-w-6xl">
+          <h2>Hi, I&apos;m Nick!</h2>
 
           <p className="text-lg text-center">
             Full Stack Web Application Developer with a background in
@@ -29,7 +27,7 @@ export default function Home() {
       </div>
       */}
 
-      <Center id="all_landing_cards" className="flex flex-col w-full m-8">
+      <Center id="all_landing_cards" className="flex flex-col w-full m-6">
         <Center className="flex-col justify-evenly lg:flex-row">
           <CardLink
             href="https://github.com/NickPrather11/Next_TS_Portfolio"
