@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <Page className="pt-4">
       <Card>
-        <Center className="flex-col mx-8 lg:max-w-6xl">
+        <Center className="flex-col lg:max-w-6xl">
           <h2>Hi, I&apos;m Nick!</h2>
 
-          <p className="text-lg text-center">
+          <p className="text-lg">
             Full Stack Web Application Developer with a background in
             customer-facing project implementation - specializing in UI
             functionality and data transformation. Additional experience in
