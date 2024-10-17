@@ -28,6 +28,9 @@ export default function RootLayout({
   intializeDB();
   return (
     <html lang="en" className={inter.className}>
+      <head>
+        <link rel="icon" href="/AvatarNick.svg" />
+      </head>
       <body className="flex flex-col m-0 p-0 min-h-screen pb-40 bg-big_green_painting bg-cover bg-center bg-fixed backdrop-brightness-[80%] text-white">
         <Navbar />
         <Suspense fallback={<Loading />}>{children}</Suspense>

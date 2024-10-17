@@ -20,10 +20,8 @@ const aboutSite = () => {
           using Mongoose.
           <br></br>
           <br></br>
-          <p>
-            If you&apos;d like to check out the code repo for this site and see
-            the updates I have planned, see the links below.
-          </p>
+          If you&apos;d like to check out the code repo for this site and see
+          the updates I have planned, see the links below.
         </p>
 
         <div className="flex flex-col justify-evenly mt-8 gap-8 md:flex-row">

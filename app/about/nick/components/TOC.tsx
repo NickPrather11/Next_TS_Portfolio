@@ -1,19 +1,12 @@
 "use client";
 import Link from "next/link";
-import React, {
-  createContext,
-  JSXElementConstructor,
-  ReactNode,
-  useState,
-} from "react";
+import React, { createContext, useState } from "react";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 
 type ExpandedContextType = boolean;
 
 const DropdownContext = createContext<ExpandedContextType>(false);
 
-{
-  /* 
 interface ITOCSubLink {
   sectionPath: string;
   text: string;
@@ -25,11 +18,9 @@ interface ITOCLink {
   subLinks: ITOCSubLink[] | null;
 }
 
-interface TOCProps {
-  TOCLinks: (expandedState: boolean) => JSX.Element;
-}
+const TOC = () => {
+  const [expandedTOC, setExpandedTOC] = useState<ExpandedContextType>(false);
 
-export const TOCLinks = (expandedState: boolean) => {
   const linkList: ITOCLink[] = [
     {
       sectionPath: "#professional_experience",
@@ -69,43 +60,6 @@ export const TOCLinks = (expandedState: boolean) => {
       subLinks: null,
     },
   ];
-  return (
-    <ul
-      className={`${
-        expandedState
-          ? "flex flex-col pl-4 gap-2 list-disc [&_ul]:list-[revert] pb-4"
-          : "hidden"
-      }`}
-    >
-      {linkList.map((section: ITOCLink, index: number) => (
-        <li key={index}>
-          <Link href={section.sectionPath} className="link">
-            {section.text}
-          </Link>
-          <ul className="flex flex-col pl-8 gap-2">
-            (
-            {section.subLinks !== null
-              ? section.subLinks.map((subsection: ITOCSubLink, i: number) => (
-                  <li key={i}>
-                    <Link href={subsection.sectionPath} className="link">
-                      {subsection.text}
-                    </Link>
-                  </li>
-                ))
-              : null}
-            )
-          </ul>
-        </li>
-      ))}
-      ;
-    </ul>
-  );
-};
-*/
-}
-
-const TOC = () => {
-  const [expandedTOC, setExpandedTOC] = useState<ExpandedContextType>(false);
 
   return (
     <div>
@@ -119,8 +73,6 @@ const TOC = () => {
         </button>
       </div>
       <DropdownContext.Provider value={expandedTOC}>
-        {/*<TOCLinks expandedState={expandedTOC} />*/}
-
         <ul
           className={`${
             expandedTOC
@@ -128,48 +80,26 @@ const TOC = () => {
               : "hidden"
           }`}
         >
-          <li>
-            <Link href="" className="link">
-              Professional Experience
-            </Link>
-          </li>
-          <ul className="flex flex-col pl-8 gap-2">
-            <li>
-              <Link href="" className="link">
-                Field2Base
+          {linkList.map((section: ITOCLink, index: number) => (
+            <li key={index}>
+              <Link href={section.sectionPath} className="link">
+                {section.text}
               </Link>
+              <ul className="flex flex-col pl-8 gap-2">
+                {section.subLinks !== null
+                  ? section.subLinks.map(
+                      (subsection: ITOCSubLink, i: number) => (
+                        <li key={i}>
+                          <Link href={subsection.sectionPath} className="link">
+                            {subsection.text}
+                          </Link>
+                        </li>
+                      )
+                    )
+                  : null}
+              </ul>
             </li>
-            <li>
-              <Link href="#soundpure" className="link">
-                SoundPure
-              </Link>
-            </li>
-            <li>
-              <Link href="#moog" className="link">
-                Moog Music
-              </Link>
-            </li>
-            <li>
-              <Link href="#freelance_audio" className="link">
-                Freelance Music and Audio
-              </Link>
-            </li>
-          </ul>
-          <li>
-            <Link href="#languages_and_tech" className="link">
-              Languages & Tech
-            </Link>
-          </li>
-          <li>
-            <Link href="#education" className="link">
-              Education
-            </Link>
-          </li>
-          <li>
-            <Link href="#additional_background" className="link">
-              Additional Background
-            </Link>
-          </li>
+          ))}
         </ul>
       </DropdownContext.Provider>
     </div>
