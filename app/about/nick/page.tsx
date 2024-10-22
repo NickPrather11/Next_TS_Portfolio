@@ -8,7 +8,7 @@ import LanguagesAndTech from "./components/LanguagesAndTech";
 import Link from "next/link";
 import { FaArrowCircleUp } from "react-icons/fa";
 
-const aboutNick = () => {
+const AboutNick = () => {
   return (
     <Center className="md:w-9/12">
       <Card className="flex flex-col">
@@ -67,4 +67,4 @@ const aboutNick = () => {
   );
 };
 
-export default aboutNick;
+export default AboutNick;

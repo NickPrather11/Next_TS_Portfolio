@@ -5,7 +5,7 @@ import CardLink from "../components/CardLink";
 import Page from "../page";
 import Card from "../components/Card";
 
-const projectsPage = () => {
+const ProjectsPage = () => {
   const projects: IProject[] = dbProjectsSeed;
   return (
     <ul className="flex flex-col justify-center items-center md:flex-row md:flex-wrap">
@@ -32,4 +32,4 @@ const projectsPage = () => {
   );
 };
 
-export default projectsPage;
+export default ProjectsPage;

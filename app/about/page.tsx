@@ -2,7 +2,7 @@ import React from "react";
 import Center from "../components/Center";
 import CardLink, { ICardLink } from "../components/CardLink";
 
-const aboutPage = () => {
+const AboutPage = () => {
   const linkProps: ICardLink[] = [
     {
       href: "/about/site",
@@ -54,4 +54,4 @@ const aboutPage = () => {
   );
 };
 
-export default aboutPage;
+export default AboutPage;

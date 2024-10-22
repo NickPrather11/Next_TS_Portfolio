@@ -4,7 +4,7 @@ import Link from "next/link";
 import Card from "@/app/components/Card";
 import Center from "@/app/components/Center";
 
-const lebowskiTriviaPage = () => {
+const LebowskiTriviaPage = () => {
   const project: IProject = {
     slug: "lebowski_trivia",
     imgPath: "/projectImages/Lebowski_Trivia.PNG",
@@ -46,4 +46,4 @@ const lebowskiTriviaPage = () => {
   );
 };
 
-export default lebowskiTriviaPage;
+export default LebowskiTriviaPage;

@@ -5,23 +5,22 @@ import Link from "next/link";
 import TechCard from "@/app/about/site/components/TechCard";
 import dbLogoSeed, { ILogo } from "@/app/db/seeds/dbLogoSeed";
 
-const aboutSite = () => {
+const AboutSite = () => {
   const item: ILogo[] = dbLogoSeed;
+
   return (
     <Center className="flex-col">
       <Card className="md:w-9/12">
         <h2 className="text-center">About This Site</h2>
 
         <p>
-          Thanks for checking out my portfolio! This site is a responsive React
-          web application built with the Next.js framework in a Node environment
-          using Typescript as the base language. Styling has been added using
-          TailwindCSS. This site contains data retrieved from a MongoDB database
+          This site is a React.JS application built with Next.JS, Typescript,
+          and TailwindCSS, containing data retrieved from a MongoDB database
           using Mongoose.
           <br></br>
           <br></br>
-          If you&apos;d like to check out the code repo for this site and see
-          the updates I have planned, see the links below.
+          If you would like to check out the code repo for this site and see the
+          updates I have planned, see the links below.
         </p>
 
         <div className="flex flex-col justify-evenly mt-8 gap-8 md:flex-row">
@@ -65,4 +64,4 @@ const aboutSite = () => {
   );
 };
 
-export default aboutSite;
+export default AboutSite;

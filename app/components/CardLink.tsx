@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import Center from "./Center";
 import Card from "./Card";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export interface ICardLink {
   href: string;
@@ -21,13 +23,23 @@ const CardLink = ({
   childImgPath,
 }: ICardLink) => {
   const [clicked, setClicked] = useState(false);
+  const router = useRouter();
 
-  const handleOnClick = (e: React.MouseEvent<HTMLElement>) => {
+  const handleOnClickExternal = (e: React.MouseEvent<HTMLElement>) => {
     e.preventDefault();
     setClicked(true);
     setTimeout(() => {
       const newWindow = window.open(href, target, "noopener,noreferrer");
       if (newWindow) newWindow.opener = null;
+      setClicked(false);
+    }, 500);
+  };
+
+  const handleOnClickInternal = (e: React.MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    setClicked(true);
+    setTimeout(() => {
+      router.push(href);
       setClicked(false);
     }, 500);
   };
@@ -43,17 +55,33 @@ const CardLink = ({
         }
         ${className}`}
     >
-      <button onClick={(e) => handleOnClick(e)}>
-        <Center className="flex flex-col">
-          {childImgPath !== null ? (
-            <div className="flex flex-0">
-              <img src={childImgPath} alt="" className="m-2 mb-4" />
-            </div>
-          ) : null}
-          <h3 className="text-center text-nowrap">{title}</h3>
-          <p className="text-center text-sm text-wrap">{description}</p>
-        </Center>
-      </button>
+      {target === "_blank" ? (
+        <button onClick={(e) => handleOnClickExternal(e)}>
+          <Center className="flex flex-col">
+            {childImgPath !== null ? (
+              <div className="flex flex-0">
+                <img src={childImgPath} alt="" className="m-2 mb-4" />
+              </div>
+            ) : null}
+            <h3 className="text-center text-nowrap">{title}</h3>
+            <p className="text-center text-sm text-wrap">{description}</p>
+          </Center>
+        </button>
+      ) : (
+        <Link href={href} legacyBehavior={true}>
+          <a onClick={(e) => handleOnClickInternal(e)}>
+            <Center className="flex flex-col">
+              {childImgPath !== null ? (
+                <div className="flex flex-0">
+                  <img src={childImgPath} alt="" className="m-2 mb-4" />
+                </div>
+              ) : null}
+              <h3 className="text-center text-nowrap">{title}</h3>
+              <p className="text-center text-sm text-wrap">{description}</p>
+            </Center>
+          </a>
+        </Link>
+      )}
     </Card>
   );
 };

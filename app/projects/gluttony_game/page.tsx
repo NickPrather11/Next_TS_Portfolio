@@ -4,7 +4,7 @@ import Link from "next/link";
 import Card from "@/app/components/Card";
 import Center from "@/app/components/Center";
 
-const gluttonyGamePage = () => {
+const GluttonyGamePage = () => {
   const project: IProject = {
     slug: "gluttony_game",
     imgPath: "/projectImages/Gluttony_Game.PNG",
@@ -46,4 +46,4 @@ const gluttonyGamePage = () => {
   );
 };
 
-export default gluttonyGamePage;
+export default GluttonyGamePage;

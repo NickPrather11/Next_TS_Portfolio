@@ -2,7 +2,7 @@ import React from "react";
 import Page from "../components/Page";
 import Card from "../components/Card";
 
-const contactPage = () => {
+const ContactPage = () => {
   return (
     <Page>
       <h1>CONTACT</h1>
@@ -77,4 +77,4 @@ const contactPage = () => {
   );
 };
 
-export default contactPage;
+export default ContactPage;

@@ -1,39 +1,63 @@
 "use client";
-import React, { Suspense, useState } from "react";
+import React, { createContext, useState, useEffect, Suspense } from "react";
 import Loading from "../components/LoadingComponent";
 import Page from "../components/Page";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
-interface ILinkProps {
+interface ITabProps {
   href: string;
-  linkText: string;
+  tabText: string;
+  stateNum: number;
 }
 
-export default function ProjectsLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  const [activeLink, setActiveLink] = useState(0);
+interface ActiveTabContextType {
+  activeTabState: number;
+  setActiveTabState: (newValue: number) => void;
+}
 
-  const linkProps: ILinkProps[] = [
+const ActiveTabContext = createContext<ActiveTabContextType>({
+  activeTabState: 0,
+  setActiveTabState: () => {},
+});
+
+export default function AboutPageLayout({ children }: any) {
+  const [activeTabState, setActiveTabState] = useState(0);
+  const pathname = usePathname();
+  const tabProps: ITabProps[] = [
     {
       href: "/about/site",
-      linkText: "About This Site",
+      tabText: "About This Site",
+      stateNum: 1,
     },
     {
       href: "/about/nick",
-      linkText: "About Nick",
+      tabText: "About Nick",
+      stateNum: 2,
     },
     {
       href: "/about/music",
-      linkText: "Music",
+      tabText: "Music",
+      stateNum: 3,
     },
     {
       href: "/about/paintings",
-      linkText: "Paintings",
+      tabText: "Paintings",
+      stateNum: 4,
     },
   ];
+
+  useEffect(() => {
+    tabProps.forEach((tab) => {
+      if (tab.href === pathname) {
+        setActiveTabState(tab.stateNum);
+        return;
+      } else if (pathname === "/about") {
+        setActiveTabState(0);
+        return;
+      }
+    });
+  }, [pathname]);
 
   return (
     <Page>
@@ -47,20 +71,23 @@ export default function ProjectsLayout({
 
       <hr className="mt-6 w-11/12 md:w-7/12" />
 
-      <div className="flex flex-row flex-wrap justify-evenly w-full pt-2 md:justify-center md:gap-10 md:w-7/12">
-        {linkProps.map((link: ILinkProps, index: number) => (
-          <Link
-            key={index}
-            onClick={() => setActiveLink(index + 1)}
-            href={link.href}
-            className={`tab-link ${
-              activeLink === index + 1 ? "bg-slate-800 bg-opacity-70" : ""
-            }`}
-          >
-            {link.linkText}
-          </Link>
-        ))}
-      </div>
+      <ActiveTabContext.Provider value={{ activeTabState, setActiveTabState }}>
+        <div className="flex flex-row flex-wrap justify-evenly w-full pt-2 md:justify-center md:gap-10 md:w-7/12">
+          {tabProps.map((tab: ITabProps, index: number) => (
+            <Link
+              key={index}
+              href={tab.href}
+              className={`tab-link ${
+                activeTabState === tab.stateNum
+                  ? "bg-slate-800 bg-opacity-70"
+                  : ""
+              }`}
+            >
+              {tab.tabText}
+            </Link>
+          ))}
+        </div>
+      </ActiveTabContext.Provider>
 
       <Page className="lg:w-11/12">
         <Suspense fallback={<Loading />}>{children}</Suspense>

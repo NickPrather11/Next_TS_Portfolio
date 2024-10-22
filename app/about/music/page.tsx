@@ -19,7 +19,7 @@ const getAlbums = async (): Promise<AlbumArray> => {
   return res.json();
 };
 
-const projectsPage = async () => {
+const MusicPage = async () => {
   const { albums } = await getAlbums();
   albums.sort((a, b) =>
     b.releaseDate > a.releaseDate ? 1 : a.releaseDate > b.releaseDate ? -1 : 0
@@ -51,4 +51,4 @@ const projectsPage = async () => {
   );
 };
 
-export default projectsPage;
+export default MusicPage;
