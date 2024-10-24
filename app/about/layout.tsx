@@ -11,15 +11,7 @@ interface ITabProps {
   stateNum: number;
 }
 
-interface ActiveTabContextType {
-  activeTabState: number;
-  setActiveTabState: (newValue: number) => void;
-}
-
-const ActiveTabContext = createContext<ActiveTabContextType>({
-  activeTabState: 0,
-  setActiveTabState: () => {},
-});
+const ActiveTabContext = createContext<number>(0);
 
 export default function AboutPageLayout({ children }: any) {
   const [activeTabState, setActiveTabState] = useState(0);
@@ -71,7 +63,7 @@ export default function AboutPageLayout({ children }: any) {
 
       <hr className="mt-6 w-11/12 md:w-7/12" />
 
-      <ActiveTabContext.Provider value={{ activeTabState, setActiveTabState }}>
+      <ActiveTabContext.Provider value={activeTabState}>
         <div className="flex flex-row flex-wrap justify-evenly w-full pt-2 md:justify-center md:gap-10 md:w-7/12">
           {tabProps.map((tab: ITabProps, index: number) => (
             <Link

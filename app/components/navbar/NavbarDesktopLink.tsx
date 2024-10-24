@@ -17,11 +17,10 @@ interface NavLinkProps {
   icon: ReactNode;
   dropdownBool: boolean;
   dropdownContents: NavDropdownLink[];
+  handleActiveLink: (newValue: string) => void;
 }
 
-type ExpandedContextType = boolean;
-
-const DropdownContext = createContext<ExpandedContextType>(false);
+const DropdownContext = createContext<boolean>(false);
 
 const NavbarDesktopLink = ({
   path,
@@ -29,8 +28,9 @@ const NavbarDesktopLink = ({
   icon,
   dropdownBool,
   dropdownContents,
+  handleActiveLink,
 }: NavLinkProps) => {
-  const [expanded, setExpanded] = useState<ExpandedContextType>(false);
+  const [expanded, setExpanded] = useState(false);
 
   const handleExpandedStateUpdate = (newValue: boolean) => {
     setExpanded(newValue);
@@ -38,12 +38,14 @@ const NavbarDesktopLink = ({
 
   return (
     <div>
-      <Center>
-        <Link href={path} className="mx-4">
-          <Center className="gap-2 text-lg text-white hover:text-gray-500/75">
-            {icon}
-            <p>{name}</p>
-          </Center>
+      <Center className="my-2">
+        <Link href={path} className="mx-2 ">
+          <button onClick={() => handleActiveLink(name)}>
+            <Center className="gap-2 text-lg text-white hover:text-gray-500/75">
+              {icon}
+              <p>{name}</p>
+            </Center>
+          </button>
         </Link>
 
         {dropdownBool ? (
@@ -68,7 +70,9 @@ const NavbarDesktopLink = ({
         >
           <NavbarDesktopDropdown
             dropdownContents={dropdownContents}
-            onUpdateNavDeskLinkState={handleExpandedStateUpdate}
+            handleExpanded={handleExpandedStateUpdate}
+            handleActiveLink={handleActiveLink}
+            rootLinkName={name}
           />
         </div>
       </DropdownContext.Provider>

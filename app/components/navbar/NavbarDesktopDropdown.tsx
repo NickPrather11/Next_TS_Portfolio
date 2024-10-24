@@ -5,12 +5,16 @@ import { NavDropdownLink } from "./NavbarDesktopLink";
 
 interface DropdownLinkProps {
   dropdownContents: NavDropdownLink[];
-  onUpdateNavDeskLinkState: (newValue: boolean) => void;
+  handleExpanded: (newValue: boolean) => void;
+  handleActiveLink: (newValue: string) => void;
+  rootLinkName: string;
 }
 
 const NavbarDesktopDropdown = ({
   dropdownContents,
-  onUpdateNavDeskLinkState,
+  handleExpanded,
+  handleActiveLink,
+  rootLinkName,
 }: DropdownLinkProps) => {
   return (
     <div className="flex flex-col p-4 gap-4">
@@ -18,7 +22,10 @@ const NavbarDesktopDropdown = ({
         <Link
           key={dropLink.text}
           href={dropLink.path}
-          onClick={() => onUpdateNavDeskLinkState(false)}
+          onClick={() => {
+            handleExpanded(false);
+            handleActiveLink(rootLinkName);
+          }}
         >
           <div
             className="flex flex-row justify-start gap-4 text-lg text-right text-white 
