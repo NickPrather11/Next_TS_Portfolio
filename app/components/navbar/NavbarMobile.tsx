@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useRef, useState } from "react";
 import {
   BsCassette,
   BsFillHouseFill,
@@ -18,9 +18,25 @@ const MobileMenuContext = createContext<ExpandedContextType>(false);
 
 const NavbarMobile = ({ className }: any) => {
   const [expanded, setExpanded] = useState<ExpandedContextType>(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const handleParentExpandedStateUpdate = (newStateValue: boolean) => {
     setExpanded(newStateValue);
   };
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
+      setExpanded(false);
+    }
+  };
+
+  useEffect(() => {
+    if (expanded) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [expanded]);
 
   return (
     <div className={`flex flex-grow justify-end ${className}`}>
@@ -34,6 +50,7 @@ const NavbarMobile = ({ className }: any) => {
       </div>
       <MobileMenuContext.Provider value={expanded}>
         <div
+          ref={dropdownRef}
           className={`${
             expanded
               ? "flex flex-col absolute z-50 right-0 mr-2 mt-16 rounded-xl border border-slate-200 bg-slate-900"

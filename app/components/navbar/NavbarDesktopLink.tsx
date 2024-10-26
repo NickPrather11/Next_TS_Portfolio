@@ -1,5 +1,11 @@
 "use client";
-import React, { createContext, ReactNode, useState } from "react";
+import React, {
+  createContext,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import Link from "next/link";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import NavbarDesktopDropdown from "./NavbarDesktopDropdown";
@@ -31,10 +37,26 @@ const NavbarDesktopLink = ({
   handleActiveLink,
 }: NavLinkProps) => {
   const [expanded, setExpanded] = useState(false);
-
+  const dropdownRef = useRef<HTMLDivElement>(null);
   const handleExpandedStateUpdate = (newValue: boolean) => {
     setExpanded(newValue);
   };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      dropdownRef.current &&
+      !dropdownRef.current.contains(event.target as Node)
+    ) {
+      setExpanded(false);
+    }
+  };
+
+  useEffect(() => {
+    if (expanded) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [expanded]);
 
   return (
     <div>
@@ -62,6 +84,7 @@ const NavbarDesktopLink = ({
       {/* Dropdown Menu */}
       <DropdownContext.Provider value={expanded}>
         <div
+          ref={dropdownRef}
           className={`${
             expanded
               ? "flex flex-col absolute z-50 mt-2 px-2 rounded-xl border border-slate-200 bg-slate-900"

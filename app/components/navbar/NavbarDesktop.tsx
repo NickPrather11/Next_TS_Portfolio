@@ -20,10 +20,6 @@ const NavbarDesktop = ({ className }: any) => {
     setActiveLink(newValue);
   };
 
-  useEffect(() => {
-    console.log("activeLink: " + activeLink);
-  }, [activeLink]);
-
   return (
     <div className={`hidden items-center gap-4 ${className}`}>
       <ActiveLinkContext.Provider value={activeLink}>
