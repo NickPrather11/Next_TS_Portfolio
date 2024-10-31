@@ -2,7 +2,7 @@ import React from "react";
 import moment from "moment";
 import Link from "next/link";
 import Center from "../../../components/Center";
-import { IAlbum } from "@/app/db/seeds/dbAlbumsSeed";
+import { IAlbumObject } from "@/app/db/controllers/bandcampScraper";
 
 const AlbumCard = ({
   albumName,
@@ -10,7 +10,7 @@ const AlbumCard = ({
   albumImg,
   artistName,
   releaseDate,
-}: IAlbum) => {
+}: IAlbumObject) => {
   const releaseDateString = moment(releaseDate).format("l");
   return (
     <Link

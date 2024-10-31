@@ -1,10 +1,10 @@
 import React from "react";
 import AlbumCard from "@/app/about/music/components/AlbumCard";
 import Card from "@/app/components/Card";
-import { IAlbum } from "@/app/db/seeds/dbAlbumsSeed";
+import { IAlbumObject } from "@/app/db/controllers/bandcampScraper";
 
 interface AlbumArray {
-  albums: IAlbum[];
+  albums: IAlbumObject[];
 }
 
 const getAlbums = async (): Promise<AlbumArray> => {
@@ -35,7 +35,7 @@ const MusicPage = async () => {
       </div>
 
       <ul className="flex flex-wrap justify-center mt-10">
-        {albums.map((album: IAlbum) => (
+        {albums.map((album: IAlbumObject) => (
           <li key={album.albumName}>
             <AlbumCard
               albumImg={album.albumImg}
