@@ -1,11 +1,12 @@
 import * as cheerio from "cheerio";
+import moment from "moment";
 
 export interface IAlbumObject {
   bandcampURL: string;
   albumName: string;
   albumImg: string;
   artistName: string;
-  releaseDate: Date;
+  releaseDate: string;
 }
 
 const scrapeAlbums = async (targetBaseURL: string): Promise<IAlbumObject[]> => {
@@ -29,7 +30,7 @@ const scrapeAlbums = async (targetBaseURL: string): Promise<IAlbumObject[]> => {
       albumName: "",
       albumImg: "",
       artistName: "",
-      releaseDate: new Date(),
+      releaseDate: "",
     };
 
     let url = targetBaseURL + ($(element).children("a").attr("href") ?? "");
@@ -84,16 +85,17 @@ const scrapeReleaseDates = async (albums: IAlbumObject[]) => {
       const html = await response.text();
       const $ = cheerio.load(html);
       const credits = $(".tralbum-credits").text().trim();
-      let dateString = "";
+      let dateScrape = "";
 
       if (credits.includes("\n")) {
-        dateString = credits.slice(0, credits.indexOf("\n"));
+        dateScrape = credits.slice(0, credits.indexOf("\n"));
       } else {
-        dateString = credits;
+        dateScrape = credits;
       }
 
-      dateString = dateString.slice(9);
-      album.releaseDate = new Date(dateString);
+      dateScrape = dateScrape.slice(9);
+      let formattedDate = new Date(dateScrape);
+      album.releaseDate = moment(formattedDate).format("YYYY/MM/DD");
 
       return album;
     })
@@ -114,6 +116,7 @@ const getAllAlbums = async () => {
       allAlbums.push(...pageAlbums);
     })
   );
+  console.log("Albums scraped: " + allAlbums.length);
   allAlbums.sort((a, b) =>
     b.releaseDate > a.releaseDate ? 1 : a.releaseDate > b.releaseDate ? -1 : 0
   );

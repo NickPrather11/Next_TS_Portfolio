@@ -6,7 +6,7 @@ const albumSchema = new Schema(
     albumImg: String,
     artistName: String,
     bandcampURL: String,
-    releaseDate: Date,
+    releaseDate: String,
   },
   {
     collection: "albums",

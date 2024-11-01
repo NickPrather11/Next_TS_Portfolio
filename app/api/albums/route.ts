@@ -14,6 +14,7 @@ export async function GET() {
   try {
     await dbConnect();
     const albums = await Album.find();
+    console.log("Albums retrieved from API: " + albums.length);
     return NextResponse.json({ albums });
   } catch (err) {
     console.log("GET error: " + err);

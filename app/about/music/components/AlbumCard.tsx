@@ -11,7 +11,7 @@ const AlbumCard = ({
   artistName,
   releaseDate,
 }: IAlbumObject) => {
-  const releaseDateString = moment(releaseDate).format("l");
+  const releaseDateString = moment(releaseDate, "YYYY/MM/DD").format("l");
   return (
     <Link
       key={albumName}
